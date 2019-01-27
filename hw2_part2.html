@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW2 Part2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+  </script>
+<script>
+        function process()
+        {
+        var number1, number2, number3, n1, n2, n3, sum, average, product, min, max;
+        
+        number1 = document.forms["myform"].elements["num1"].value;
+        number2 = document.forms["myform"].elements["num2"].value;
+        number3 = document.forms["myform"].elements["num3"].value;
+        
+        n1 = parseInt(number1);
+        n2 = parseInt(number2);
+        n3 = parseInt(number3);
+        
+        sum = n1 + n2 + n3;
+        average = sum/3;
+        product = n1 * n2 * n3; 
+        max= Math.max(n1, n2, n3);
+        min = Math.min(n1, n2, n3);
+        document.forms["myform"].elements["result"].value = ("The Sum is: " + sum
+        + "\nThe Average is: " + average
+        + "\nThe Product is: "+ product
+        + "\nThe Smallest Number is: " + min
+        + "\nThe Largest Number is: " + max);}
+        </script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.col-sm-4 {
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                    <li><a href="hw2_part1.html">Part 1</a></li>
+                    <li class="active"><a href="hw2_part2.html">Part 2</a></li>
+                    <li><a href="hw2_part3.html">Part 3</a></li>
+                    <li><a href="hw2_part4.html">Part 4</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 2 Basic Operations</h2>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+            <form name="myform">
+                    <table>
+                    <tr>
+                        <td>First Number:</td>
+                        <td><input type="text" name="num1" size="10"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Second Number:</td>
+                        <td><input type="text" name="num2" size="10"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Third Number:</td>
+                        <td><input type="text" name="num3" size="10"></td>
+                    </tr>
+                    
+                    </table>
+                    
+                    <br> Results:
+                    <textarea rows="5" cols="40" name="result">
+                    </textarea>
+                    <br><br>
+                    <input type="button" onclick="process()" value="SUBMIT">
+                    <input type="reset" value="RESET">
+                    </form>
+        
+    
+    
+    </div>
+    <div class="col-sm-4">
+    </div>
+        
+  </div>
+
+</body>
+</html>
