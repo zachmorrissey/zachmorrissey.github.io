@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW2 Extra Credit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+  </script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border-style: dotted;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+  </style>
+  <script>
+  function process()
+  {
+    var GBP = 0.7746, 
+        CAD = 1.3453,
+        EUR = 0.88667, 
+        JPY = 109.34,
+        MXN = 18.2334,
+        result_GBP = 0,
+        result_CAD = 0,
+        result_EUR = 0,
+        result_JPY = 0,
+        result_MXN = 0; 
+
+        input = document.forms["myform"].elements["num1"].value;
+        n1 = parseInt(input);
+
+        result_GBP = GBP * input;
+        result_CAD = CAD * input; 
+        result_EUR = EUR * input;
+        result_JPY = JPY * input;
+        result_MXN = MXN * input;
+
+        document.getElementById("GBP").innerHTML = GBP;
+        document.getElementById("result_GBP").innerHTML = result_GBP.toFixed(2);
+        document.getElementById("CAD").innerHTML = CAD;
+        document.getElementById("result_CAD").innerHTML = result_CAD.toFixed(2);
+        document.getElementById("EUR").innerHTML = EUR;
+        document.getElementById("result_EUR").innerHTML = result_EUR.toFixed(2);
+        document.getElementById("JPY").innerHTML = JPY;
+        document.getElementById("result_JPY").innerHTML = result_JPY.toFixed(2);
+        document.getElementById("MXN").innerHTML = MXN;
+        document.getElementById("result_MXN").innerHTML = result_MXN.toFixed(2);
+
+
+  }
+  
+  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                        <li><a href="hw2.html">Home</a></li>
+                        <li><a href="hw2_part1.html">Part 1</a></li>
+                        <li><a href="hw2_part2.html">Part 2</a></li>
+                        <li><a href="hw2_part3.html">Part 3</a></li>
+                        <li><a href="hw2_part4.html">Part 4</a></li>
+                        <li class="active"><a href="hw2_ec.html">Extra Credit</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 2 Basic Operations</h2>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">    
+        <form name="myform">
+               <table>
+                   <tr>
+                       <th colspan="3" style="text-align: center;">Monetary Exchange Rates</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center;">Currency</th>  
+                        <th style="text-align: center;">Rate</th> 
+                        <th style="text-align: center;">Value</th>
+                    </tr>
+           
+               <tr text-align="left">
+                   <td>British Pound</td> 
+                   <td id="GBP">0.7746</td>
+                   <td id="result_GBP"></td> 
+                </tr>
+   
+           <tr text-align="left">
+               <td>Canadian Dollar</td>  
+                <td id="CAD">1.3453</td>
+                <td id="result_CAD"></td> 
+            </tr>
+        
+            <tr text-align="left">
+                <td>Euro</td>
+                <td id="EUR">0.88667</td>
+                <td id="result_EUR"></td> 
+            </tr>
+   
+           <tr text-align="left">
+               <td>Japanese Yen</td>
+               <td id="JPY">109.34</td>
+               <td id="result_JPY"></td> 
+            </tr>
+   
+           <tr text-align="left">
+               <td>Mexican Peso</td>
+               <td id="MXN">18.2334</td>
+               <td id="result_MXN"></td> 
+            </tr>
+   
+           <tr text-align="left">
+               <td colspan="2">Enter Amount of U.S. Dollars</td>
+               <td><input type="text" name="num1"></td>
+            </tr>
+   
+            </table>
+            
+            <input type="button" onclick="process()" value="SUBMIT">
+            <input type="reset" value="RESET">
+            
+    
+        </form>
+    </div>
+    <div class="col-sm-4">
+    </div>
+        
+  </div>
+
+</body>
+</html>
