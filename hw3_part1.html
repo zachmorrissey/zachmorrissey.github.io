@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h1,h2,h4,form {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+tr {
+    text-align: left;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
+  </style>
+  <script>
+  function process()
+  {
+      var hwavg, midscore, finalscore, acr, result;
+
+      hwavg = document.forms["myform"].elements["hwavg"].value;
+      midscore = document.forms["myform"].elements["midscore"].value;
+      finalscore = document.forms["myform"].elements["finalscore"].value;
+      acr = document.forms["myform"].elements["acr"].value;
+    
+    if (hwavg =="" 
+    || midscore ==""
+    || finalscore ==""
+    || acr ==""
+    ||)
+        {
+            window.alert("Input not valid. Only a number 0-100")
+        }
+    else{
+        result = (.5*hwavg) + (.2*midscore) + (.2*finalscore) + (.1*acr);
+        document.getElementById("result").innerHTML = Math.round(result);
+    }
+  }
+  </script>
+
+<script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+        </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li class="active"><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw3.html">Home</a></li>
+                      <li class="active"><a href="hw3_part1.html">Part 1</a></li>
+                      <li><a href="hw3_part2.html">Part 2</a></li>
+                      <li><a href="hw3_part3.html">Part 3</a></li>
+                      <li><a href="hw3_part4.html">Part 4</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 3 Functions</h2>
+   <div class="col-sm-4">
+    <h5>Grading scale</h5>
+    <img src="img/grading.jpg" alt="screen capture of grading scale"> 
+    </div>
+    <div class="col-sm-4">
+    <h1>Student Grades</h1>
+    <h4>This tool will help you forcast your final grade</h4> 
+    
+    <div id="flip">Click for Instructions</div>
+    <div id="panel">Input your scores below with a value between 0-100</div>
+    <br>
+    <form name="myform">
+        <table>
+             <tr>
+                 <td style="text-align: center;">Homework Average</td>  
+                 <td><input type="number" name="hwavg"></td>
+             </tr>
+    
+             <tr>
+                <td style="text-align: center;">Mid-Term Score</td>  
+                <td><input type="number" name="midscore"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Final Exam Score</td>  
+                <td><input type="number" name="finalscore"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">ACR</td>  
+                <td><input type="number" name="acr"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Final Average</td>
+                <td id="result">
+             </tr>
+     </table>
+
+     <input type="button" onclick="process()" value="SUBMIT">
+     <input type="reset" value="RESET">
+     
+
+ </form>
+        
+    
+    
+    </div>
+    <div class="col-sm-4">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>

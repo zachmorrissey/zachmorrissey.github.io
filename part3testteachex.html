@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="if statement based on form input">
+
+<title>If Statement - Example 1</title>
+
+<script>
+
+function process()  {
+
+var age, senior;
+
+age = document.getElementById("input").value
+
+senior = (age >= 65) ? "You are now able for senior benefits":"You are still young to get senior benefits";
+alert(senior + "\n" + age + " was the age you entered");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h3>Enter the age to get senior benefits</h3>
+
+<form>
+<input type="text" id="input" size="3">
+<input type="button" value="submit" onclick="process();">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>
