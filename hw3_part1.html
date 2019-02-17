@@ -66,17 +66,24 @@ table {
       finalscore = document.forms["myform"].elements["finalscore"].value;
       acr = document.forms["myform"].elements["acr"].value;
     
-    if (hwavg =="" 
-    || midscore ==""
-    || finalscore ==""
-    || acr ==""
-    ||)
-        {
-            window.alert("Input not valid. Only a number 0-100")
-        }
+    if (hwavg =="" || midscore =="" || finalscore =="" || acr =="" || hwavg < 0 || midscore < 0 || 
+    finalscore < 0 || acr < 0 || hwavg > 100 || midscore > 100 || finalscore > 100 || acr > 100)
+    { 
+        document.forms["myform"].elements["hwavg"].value="";
+        document.forms["myform"].elements["midscore"].value="";
+        document.forms["myform"].elements["finalscore"].value="";
+        document.forms["myform"].elements["acr"].value="";
+        document.forms["myform"].elements["hwavg"].focus();
+   
+        window.alert("Input not valid. Only a number 0-100")
+    }
     else{
         result = (.5*hwavg) + (.2*midscore) + (.2*finalscore) + (.1*acr);
         document.getElementById("result").innerHTML = Math.round(result);
+    }
+    if (result < 70)
+    {
+        window.alert("Sorry, your final grade is under 70%. You'll have to retake this course")
     }
   }
   </script>
