@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>HW3</title>
+  <title>HW3 Part 2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   width: 50%;
   padding: 10px;
 }
-h2 {
+h1,h2,h4,form {
     text-align: center;
 }
 
@@ -30,7 +30,107 @@ p {
     left: 50%;
     transform: translatex(-50%);
 }
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: right;
+}
+tr {
+    text-align: left;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
   </style>
+  <script>
+  function process()
+  {
+      var item1, item2, item3, item4,
+      salesperson, 
+      item1sold, item2sold, item3sold, item4sold,
+      total1,total2,total3,total4,
+      totalsold,totalearnings;
+
+      item1 = 239.99,
+      item2 = 129.75,
+      item3 = 99.95, 
+      item4 = 350.89;
+
+      salesperson = document.forms["myform"].elements["salesperson"].value;
+      item1sold = document.forms["myform"].elements["item1sold"].value;
+      item2sold = document.forms["myform"].elements["item2sold"].value;
+      item3sold = document.forms["myform"].elements["item3sold"].value;
+      item4sold = document.forms["myform"].elements["item4sold"].value;
+    
+    if (item1sold < 0 || item2sold < 0 || item3sold < 0 || item4sold < 0)
+    { 
+        document.forms["myform"].elements["item1sold"].value="";
+        document.forms["myform"].elements["item2sold"].value="";
+        document.forms["myform"].elements["item3sold"].value="";
+        document.forms["myform"].elements["item4sold"].value="";
+        document.forms["myform"].elements["item1sold"].focus();
+   
+        window.alert("Input not valid. Only a number above 0")
+    }
+    else{
+        total1 = item1 * Math.round(item1sold);
+        document.getElementById("item1sold").innerHTML = Math.round(item1sold);
+        document.getElementById("total1").innerHTML = "$"+total1.toFixed(2);
+        
+        total2 = item2 * Math.round(item2sold); 
+        document.getElementById("item2sold").innerHTML = Math.round(item2sold);
+        document.getElementById("total2").innerHTML = "$"+total2.toFixed(2);
+
+        total3 = item3 * Math.round(item3sold); 
+        document.getElementById("item3sold").innerHTML = Math.round(item3sold);
+        document.getElementById("total3").innerHTML = "$"+total3.toFixed(2);
+
+        total4 = item4 * Math.round(item4sold); 
+        document.getElementById("item4sold").innerHTML = Math.round(item4sold);
+        document.getElementById("total4").innerHTML = "$"+total4.toFixed(2);
+
+        totalsold = total1 + total2 + total3 + total4;
+        document.getElementById("totalsold").innerHTML = "$"+totalsold.toFixed(2);
+
+        totalearnings = 200 + (totalsold * .09);
+        document.getElementById("totalearnings").innerHTML = "$"+totalearnings.toFixed(2);
+
+    }
+   
+  }
+  </script>
+
+<script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+        });
+</script>
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>
 </head>
 <body>
 
@@ -69,16 +169,97 @@ p {
 
               
     <h2>CNIT 133 Homework 3 Functions</h2>
-   <div class="col-sm-4">
-    </div>
-    <div class="col-sm-4">
-    <p>Insert Code hear
-    </p>
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+    <h1>Sales Weekly Earnings Calculator</h1>
+    <h4>This tool will help you calculate your weekly income</h4> 
+
+    <br>
+    
+    <form name="myform">
+        <table>
+             <tr data-toggle="tooltip" title="Please make sure that the salesperson's name is spelled correctly.">
+                 <td style="text-align: center;">Salesperson:</td>  
+                 <td><input type="text" name="salesperson"></td>
+             </tr>
+        </table>
+        <h4>Input the number of items sold for each item:</h4>
+        <table>
+    
+             <tr>
+                <td style="text-align: center;">Item 1:</td>  
+                <td><input type="number" name="item1sold"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Item 2:</td>  
+                <td><input type="number" name="item2sold"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center;">Item 3:</td>  
+                <td><input type="number" name="item3sold"></td>
+            </tr>
+
+            <tr>
+              <td style="text-align: center;">Item 4:</td>  
+              <td><input type="number" name="item4sold"></td>
+          </tr>
+        </table>
+        <input type="button" onclick="process()" value="SUBMIT">
+        <input type="reset" value="RESET">
+        <br><br>
+        <table>
+            <tr>
+              <th>Item #</th>
+              <th>Price</th>
+              <th>Number Sold</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>$239.99</td>
+                <td id="item1sold"></td>
+                <td id="total1"></td>
+             </tr>
+             <tr>
+                <td>2</td>
+                <td>$129.75</td>
+                <td id="item2sold"></td>
+                <td id="total2"></td>
+             </tr>
+             <tr>
+                <td>3</td>
+                <td>$99.95</td>
+                <td id="item3sold"></td>
+                <td id="total3"></td>
+             </tr>
+             <tr>
+                <td>4</td>
+                <td>$350.89</td>
+                <td id="item4sold"></td>
+                <td id="total4"></td>
+             </tr>
+             <tr>
+                <td colspan="3">Total Amount Sold:</td>
+                <td id="totalsold"></td>
+             </tr>
+             <tr>
+                <td colspan="3">Total Weekly Earnings:</td>
+                <td id="totalearnings"></td>
+             </tr>
+     </table>
+
+     
+     
+
+ </form>
         
     
     
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
     </div>
 
         
