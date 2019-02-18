@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>HW3</title>
+  <title>HW3 Part 3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   width: 50%;
   padding: 10px;
 }
-h2 {
+h1,h2,h4,form {
     text-align: center;
 }
 
@@ -30,7 +30,59 @@ p {
     left: 50%;
     transform: translatex(-50%);
 }
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
   </style>
+  <script>
+  function celsius(){
+    var input, celsius, fahrenheit;
+    celsius = document.forms["myform"].elements["input"].value;
+    fahrenheit = (9/5 * celsius) + 32;
+    document.getElementById("fahrenheit").innerHTML = Math.round(fahrenheit);
+    document.getElementById("celsius").innerHTML = Math.round(celsius);
+  }
+</script>
+<script>
+  function fahrenheit(){
+    var input, celsius, fahrenheit;
+    fahrenheit = document.forms["myform"].elements["input"].value;
+    celsius = 5/9 * (fahrenheit - 32);
+    document.getElementById("fahrenheit").innerHTML = Math.round(fahrenheit);
+    document.getElementById("celsius").innerHTML = Math.round(celsius);
+  }
+</script>
+
 </head>
 <body>
 
@@ -69,16 +121,44 @@ p {
 
               
     <h2>CNIT 133 Homework 3 Functions</h2>
-   <div class="col-sm-4">
-    </div>
-    <div class="col-sm-4">
-    <p>Insert Code hear
-    </p>
-        
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+    <h1>Celsius | Fahrenheit Converter</h1>
+    <h4>Click Celsius if you entered Celsius<br>Click Fahrenheit if you entered Fahrenheit</h4> 
+
+    <br>
     
-    
+    <form name="myform">
+        <table>
+             <tr>
+                 <td style="text-align: center;">Enter Celsius or Fahrenheit:</td>  
+                 <td><input type="number" name="input"></td>
+             </tr>
+        </table>
+        <input type="button" onclick="celsius()" value="Celsius">
+        <input type="button" onclick="fahrenheit()" value="Fahrenheit">
+        <input type="reset" value="RESET">
+        <br>
+        <h4>If you click Celsius we'll convert your Celsius to Fahrenheit 
+          <br>If you click Fahrenheit we'll convert your Fahrenheit to Celsius
+        </h4>
+        <br>
+        <table>
+          <tr>
+            <th>Celsius</th>
+            <th>Fahrenheit</th>
+          </tr>
+          <tr>
+            <td id="celsius"></td>
+            <td id="fahrenheit"></td>
+          </tr>
+     </table>
+     <br>
+ </form>
+
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
     </div>
 
         
