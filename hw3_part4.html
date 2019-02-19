@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>HW3</title>
+  <title>HW3 Part 4</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   width: 50%;
   padding: 10px;
 }
-h2 {
+h1,h2,h4,form {
     text-align: center;
 }
 
@@ -30,7 +30,60 @@ p {
     left: 50%;
     transform: translatex(-50%);
 }
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
   </style>
+
+  <script>
+  function newproblem(){
+    var num1, num2, answer, input;
+    num1 = Math.round((Math.random() * (12-0 +1))); 
+    num2 = Math.round((Math.random() * (12-0 +1)));
+    answer = num1 * num2;
+    input = document.forms["myform"].elements["input"].value;
+    document.getElementById("question").innerHTML = "What is "+num1+" X "+num2+"?";
+    
+    if (input == answer)
+    {
+      window.alert("Very Good! The answer was "+answer+" Click New Problem to try again")
+    }
+    else 
+    {
+      window.alert("No. Please try again")
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -61,7 +114,7 @@ p {
                       <li><a href="hw3_part1.html">Part 1</a></li>
                       <li><a href="hw3_part2.html">Part 2</a></li>
                       <li><a href="hw3_part3.html">Part 3</a></li>
-                      <li  class="active"><a href="hw3_part4.html">Part 4</a></li>
+                      <li class="active"><a href="hw3_part4.html">Part 4</a></li>
                   </ul>
                 </div>
               </nav> 
@@ -69,16 +122,33 @@ p {
 
               
     <h2>CNIT 133 Homework 3 Functions</h2>
-   <div class="col-sm-4">
-    </div>
-    <div class="col-sm-4">
-    <p>Insert Code hear
-    </p>
-        
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+    <h1>Multiplication Workshop</h1>
+    <h4>Answer the  problem</h4> 
+
+    <br>
     
-    
+    <form name="myform">
+        <table>
+            <tr>
+              <th>Question</th>
+              <th>Answer</th>
+            </tr>
+             <tr>
+                 <td id="question"></td>  
+                 <td><input type="number" name="input"></td>
+             </tr>
+        </table>
+        <input type="button" onclick="newproblem()" value="NEW PROBLEM">
+        <input type="button" onclick="newproblem()" value="SUBMIT">
+        <input type="reset" value="RESET">
+       
+ </form>
+
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
     </div>
 
         
