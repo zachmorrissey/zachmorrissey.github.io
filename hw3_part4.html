@@ -81,8 +81,11 @@ table {
     var status = document.getElementById("status");
     answer2 = document.forms["myform"].elements["answer2"].value;
     
-    if(answer2 != answer)
+    if(answer2 != answer){
     status.innerHTML="No. Please try again";
+    document.forms["myform"].elements["answer2"].value="";
+    document.forms["myform"].elements["answer2"].focus();
+    }
     else
       if(answer2 == answer)
       {
