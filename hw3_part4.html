@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,26 +67,36 @@ table {
   </style>
 
   <script>
+  var num1, num2, answer, answer2;
+
   function newproblem(){
-    var num1, num2, answer, input;
+    
     num1 = Math.round((Math.random() * (12-0 +1))); 
     num2 = Math.round((Math.random() * (12-0 +1)));
     answer = num1 * num2;
-    input = document.forms["myform"].elements["input"].value;
-    document.getElementById("question").innerHTML = "What is "+num1+" X "+num2+"?";
+  
+    document.getElementById("question").innerHTML = "What is "+num1+" times "+num2+"?";
+  }
+  function input(){
+    var status = document.getElementById("status");
+    answer2 = document.forms["myform"].elements["answer2"].value;
     
-    if (input == answer)
-    {
-      window.alert("Very Good! The answer was "+answer+" Click New Problem to try again")
-    }
-    else 
-    {
-      window.alert("No. Please try again")
-    }
+    if(answer2 != answer)
+    status.innerHTML="No. Please try again";
+    else
+      if(answer2 == answer)
+      {
+        status.innerHTML="Very Good! " + answer +" was right!";
+        document.forms["myform"].elements["answer2"].value="";
+        document.forms["myform"].elements["answer2"].focus();
+        newproblem();
+
+
+      }
   }
   </script>
 </head>
-<body>
+<body onload="newproblem();">
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -138,13 +149,14 @@ table {
             </tr>
              <tr>
                  <td id="question"></td>  
-                 <td><input type="number" name="input"></td>
+                 <td><input type="number" name="answer2"></td>
+             </tr>
+             <tr>
+               <td colspan="2" id="status">Click Submit to check your answer</td>
              </tr>
         </table>
         <input type="button" onclick="newproblem()" value="NEW PROBLEM">
-        <input type="button" onclick="newproblem()" value="SUBMIT">
-        <input type="reset" value="RESET">
-       
+        <input type="button" onclick="input()" value="SUBMIT">
  </form>
 
     </div>
