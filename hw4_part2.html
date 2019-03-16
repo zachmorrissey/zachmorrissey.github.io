@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW4 Part 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h1,h2,h4, h5, form {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
+.buttonHolder{
+  text-align: center;
+  
+}
+  </style>
+   
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( ".col-sm-6" ).draggable();
+} );
+</script>
+<script>
+$(init);
+
+function init() {
+    $("#row1").css({"backgroundColor": "#800000", "color": "white"});
+    $("#odd").css({"backgroundColor": "#ff7f50"});
+    $("#even").css({"backgroundColor": "#ffff00"});
+    $("#odd1").css({"backgroundColor": "#ff7f50"});
+    $("#even1").css({"backgroundColor": "#ffff00"});
+    $("#odd2").css({"backgroundColor": "#ff7f50"});
+    $("#even2").css({"backgroundColor": "#ffff00"});
+    $("#odd3").css({"backgroundColor": "#ff7f50"});
+    $("#even3").css({"backgroundColor": "#ffff00"});
+    $("#odd4").css({"backgroundColor": "#ff7f50"});
+    $("#even4").css({"backgroundColor": "#ffff00"});
+    
+    }
+</script>
+<script>
+function interest(){
+var r = document.forms["myform"].elements["rate"].value; 
+r = r*.01;
+if(r<.05 || r>.10){
+  window.alert("Inavlid input, try again")
+  document.forms["myform"].elements["rate"].value="";
+  document.forms["myform"].elements["rate"].value.focus();
+}
+else {
+
+var p, n, a = 1; 
+p = 1000;
+
+
+var tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10;
+
+for (n = 1; n <=10; n++){
+  a = (p * Math.pow(1+r,n));
+   if(n==1){
+    tmp1 = a.toFixed(2);
+  }
+  if(n==2){
+    tmp2 = a.toFixed(2);
+  }
+  if(n==3){
+    tmp3 = a.toFixed(2);
+  }
+  if(n==4){
+    tmp4 = a.toFixed(2);
+  }
+  if(n==5){
+    tmp5 = a.toFixed(2);
+  }
+  if(n==6){
+    tmp6 = a.toFixed(2);
+  }
+  if(n==7){
+    tmp7 = a.toFixed(2);
+  }
+  if(n==8){
+    tmp8 = a.toFixed(2);
+  }
+  if(n==9){
+    tmp9 = a.toFixed(2);
+  }
+  if(n==10){
+    tmp10 = a.toFixed(2);
+  }
+}
+//insert into HTML
+document.getElementById("yr1").innerHTML = "$"+tmp1;
+document.getElementById("yr2").innerHTML = "$"+tmp2;
+document.getElementById("yr3").innerHTML = "$"+tmp3;
+document.getElementById("yr4").innerHTML = "$"+tmp4;
+document.getElementById("yr5").innerHTML = "$"+tmp5;
+document.getElementById("yr6").innerHTML = "$"+tmp6;
+document.getElementById("yr7").innerHTML = "$"+tmp7;
+document.getElementById("yr8").innerHTML = "$"+tmp8;
+document.getElementById("yr9").innerHTML = "$"+tmp9;
+document.getElementById("yr10").innerHTML = "$"+tmp10;
+
+document.getElementById("r1").innerHTML = r;
+document.getElementById("r2").innerHTML = r;
+document.getElementById("r3").innerHTML = r;
+document.getElementById("r4").innerHTML = r;
+document.getElementById("r5").innerHTML = r;
+document.getElementById("r6").innerHTML = r;
+document.getElementById("r7").innerHTML = r;
+document.getElementById("r8").innerHTML = r;
+document.getElementById("r9").innerHTML = r;
+document.getElementById("r10").innerHTML = r;
+}
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li class="active"><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw4.html">Home</a></li>
+                      <li><a href="hw4_part1.html">Part 1</a></li>
+                      <li class="active"><a href="hw4_part2.html">Part 2</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 4 Looping Statements</h2>
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+    <form name="myform">
+    <h4>Your principal is $1000, calculate the compound interest</h4> 
+    <h4>Input the interest rate between 5-10%</h4> 
+    <h4><input type="number" name="rate"></h4>
+    <div class="buttonHolder">
+    <input type="button" class="btn btn-info" onclick="interest()" value="Calculate">
+  </div>
+    <br>
+    
+   
+      <table>
+           <tr id="row1">
+               <td style="text-align: center;">Year</td>  
+               <td>Amount on deposit</td>
+               <td>Interest Rate</td>
+           </tr>
+  
+           <tr id="odd">
+              <td style="text-align: center;">1</td>  
+              <td id="yr1"></td>
+              <td id="r1"></td>
+          </tr>
+
+          <tr id="even">
+              <td style="text-align: center;">2</td>  
+              <td id="yr2"></td>
+              <td id="r2"></td>
+          </tr>
+
+          <tr id="odd1">
+              <td style="text-align: center;">3</td>  
+              <td id="yr3"></td>
+              <td id="r3"></td>
+          </tr>
+
+          <tr id="even1">
+              <td style="text-align: center;">4</td>
+              <td id="yr4"></td>
+              <td id="r4"></td>
+           </tr>
+           <tr id="odd2">
+            <td style="text-align: center;">5</td>  
+            <td id="yr5"></td>
+            <td id="r5"></td>
+        </tr>
+
+        <tr id="even2">
+            <td style="text-align: center;">6</td>  
+            <td id="yr6"></td>
+            <td id="r6"></td>
+        </tr>
+
+        <tr id="odd3">
+            <td style="text-align: center;">7</td>  
+            <td id="yr7"></td>
+            <td id="r7"></td>
+        </tr>
+
+        <tr id="even3">
+            <td style="text-align: center;">8</td>
+            <td id="yr8"></td>
+            <td id="r8"></td>
+         </tr>
+         <tr id="odd4">
+          <td style="text-align: center;">9</td>  
+          <td id="yr9"></td>
+          <td id="r9"></td>
+      </tr>
+
+      <tr id="even4">
+          <td style="text-align: center;">10</td>
+          <td id="yr10"></td>
+          <td id="r10"></td>
+       </tr>
+   </table>
+   
+
+</form>
+
+    </div>
+    <div class="col-sm-3">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>

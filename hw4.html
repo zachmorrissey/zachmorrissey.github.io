@@ -13,10 +13,23 @@
   width: 50%;
   padding: 10px;
 }
-h2,p {
+h2 {
     text-align: center;
 }
 
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
   </style>
 </head>
 <body>
@@ -27,10 +40,10 @@ h2,p {
         <a class="navbar-brand" href="index.html">Cnit 133</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="hw2.html">HW 2</a></li>
         <li><a href="hw3.html">HW 3</a></li>
-        <li><a href="hw4.html">HW 4</a></li>
+        <li i class="active"><a href="hw4.html">HW 4</a></li>
         <li><a href="hw5.html">HW 5</a></li>
         <li><a href="hw6.html">HW 6</a></li>
         <li><a href="hw7.html">HW 7</a></li>
@@ -40,40 +53,32 @@ h2,p {
   </nav>
     
   <div class="container">
-        
-    <h3>This Page is under construction.</h3>
-    <br>
-    <div class="center">
-    <h2>Barcelona</h2>
-  <p>Here are some Photos from my recent holiday.</p>
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li class="active"><a href="hw4.html">Home</a></li>
+                      <li><a href="hw4_part1.html">Part 1</a></li>
+                      <li><a href="hw4_part2.html">Part 2</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 4 Looping Statements</h2>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-8">
+    <p>
+        Part 1 - Calculations with For and While Loops<br>
+        Part 2 - Compound Interest Calculator<br>
+        Part 3 - Extra Credit<br>
+    
+    </p>
     </div>
 
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-          <img src="img/1.jpg" alt="Barcelona" style="width:100%">
-          <div class="caption">
-            <p>The terrace view from my friend's house in selva de mar.</p>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-          <img src="img/2.jpg" alt="Granada" style="width:100%">
-          <div class="caption">
-            <p>My favorite moroccan alley in Granada.</p>
-          </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-          <img src="img/3.jpg" alt="Granada2" style="width:100%">
-          <div class="caption">
-            <p>A landscape shot of Granada from the top of the hill.</p>
-          </div>
-      </div>
-    </div>
-  </div>       
+        
   </div>
 
 </body>

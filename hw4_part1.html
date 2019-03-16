@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW4 Part 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h1,h2,h4, h5, form {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
+
+  </style>
+    <script>
+      
+    function a() 
+    {
+    var temp = 1;
+    var total1 = 1; 
+    var total2 = 0;
+    for (let i = 5; i <= 20; i++) {
+        if (i % 3 == 2) 
+        {
+            temp = i; 
+            total1 = temp * total1;
+            total2 = temp + total2;
+        }
+    } 
+    document.getElementById("answer1").innerHTML = "The answer to 5 * 8 * 11 * 14 * 17 * 20 is: <strong>" + total1 + "</strong>";
+    document.getElementById("answer2").innerHTML = "The answer to 5 + 8 + 11 + 14 + 17 + 20 is: <strong>" + total2 + "</strong>";
+    
+}
+
+    </script>
+    <script>
+    function b() 
+    {
+    var i = 1;
+    var temp = 1;
+    var total1 = 1; 
+    var total2 = 0;
+    while (i <= 31){
+      i++;
+      if (i % 4 == 3) {
+            temp = i;
+            total1 = temp * total1;
+            total2 = temp + total2; 
+    } 
+    }
+    document.getElementById("answer3").innerHTML = "The answer to 3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 is: <strong>" + total1 + "</strong>";
+    document.getElementById("answer4").innerHTML = "The answer to 3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 is: <strong>" + total2 + "</strong>";
+    
+}</script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( ".col-sm-6" ).draggable();
+} );
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li class="active"><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw4.html">Home</a></li>
+                      <li class="active"><a href="hw4_part1.html">Part 1</a></li>
+                      <li><a href="hw4_part2.html">Part 2</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 4 Looping Statements</h2>
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+    <h4>Click Part 1A to see the For loop</h4> 
+    <h4>Click Part 1B to see the While loop</h4>
+    <h5>*Drag the table below</h5>
+
+    <br>
+    
+    <form name="myform">
+        <table>
+            <tr>
+              <th>Description</th>
+              <th>Answer</th>
+            </tr>
+             <tr>
+                 <td rowspan="2"><b>1A: </b>The for loop takes every third integer inclusive from 5 to 20. I used i % 3 == 2 as a way to ensure only every third integer was chosen.</td>  
+                 <td id="answer1"></td>
+             </tr>
+             <tr>
+               <td id="answer2"></td>
+             </tr>
+             <tr>
+                <td rowspan="2"><b>1B: </b>The while loop takes every fourth integer inclusive from 3 to 31. I used i % 4 == 3 as a way to ensure only the fourth integer was chosen.</td>  
+                <td id="answer3"></td>
+            </tr>
+            <tr>
+              <td id="answer4"></td>
+            </tr>
+        </table>
+        <input type="button" class="btn btn-info" onclick="a()" value="Part 1A">
+        <input type="button" class="btn btn-success" onclick="b()" value="Part 1B">
+ </form>
+
+    </div>
+    <div class="col-sm-3">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>
