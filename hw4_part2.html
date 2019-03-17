@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,6 @@
 h1,h2,h4, h5, form {
     text-align: center;
 }
-
 p {
   font-size: large;
 }
@@ -31,7 +29,6 @@ p {
     left: 50%;
     transform: translatex(-50%);
 }
-
 th, td {
     border-style: groove;
     padding: 15px;
@@ -79,7 +76,6 @@ $( function() {
 </script>
 <script>
 $(init);
-
 function init() {
     $("#row1").css({"backgroundColor": "#800000", "color": "white"});
     $("#odd").css({"backgroundColor": "#ff7f50"});
@@ -105,13 +101,9 @@ if(r<.05 || r>.10){
   document.forms["myform"].elements["rate"].value.focus();
 }
 else {
-
 var p, n, a = 1; 
 p = 1000;
-
-
 var tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8, tmp9, tmp10;
-
 for (n = 1; n <=10; n++){
   a = (p * Math.pow(1+r,n));
    if(n==1){
@@ -156,7 +148,6 @@ document.getElementById("yr7").innerHTML = "$"+tmp7;
 document.getElementById("yr8").innerHTML = "$"+tmp8;
 document.getElementById("yr9").innerHTML = "$"+tmp9;
 document.getElementById("yr10").innerHTML = "$"+tmp10;
-
 document.getElementById("r1").innerHTML = r;
 document.getElementById("r2").innerHTML = r;
 document.getElementById("r3").innerHTML = r;
@@ -211,8 +202,8 @@ document.getElementById("r10").innerHTML = r;
     <div class="col-sm-6">
     <form name="myform">
     <h4>Your principal is $1000, calculate the compound interest</h4> 
-    <h4>Input the interest rate between 5-10%</h4> 
-    <input type="number" name="rate">
+    <h4>Input the interest rate between 5-10% <br>
+    <input type="number" name="rate"></h4>
     <div class="buttonHolder">
     <input type="button" class="btn btn-info" onclick="interest()" value="Calculate">
   </div>
