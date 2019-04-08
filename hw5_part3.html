@@ -118,40 +118,41 @@ p {
     document.getElementById("population").innerHTML = al[3];
     }
     
-    if (input == "ak" || input == "AK" || input == "Alaska" || input == "alaska"){
+    else if (input == "ak" || input == "AK" || input == "Alaska" || input == "alaska"){
     document.getElementById("abbr").innerHTML = ak[0];
     document.getElementById("name").innerHTML = ak[1];
     document.getElementById("capital").innerHTML = ak[2];
     document.getElementById("population").innerHTML = ak[3];
     }
 
-    if (input == "az" || input == "AZ" || input == "Arizona" || input == "arizona"){
+    else if (input == "az" || input == "AZ" || input == "Arizona" || input == "arizona"){
     document.getElementById("abbr").innerHTML = az[0];
     document.getElementById("name").innerHTML = az[1];
     document.getElementById("capital").innerHTML = az[2];
     document.getElementById("population").innerHTML = az[3];
     }
 
-    if (input == "ar" || input == "AR" || input == "Arkansas" || input == "arkansas"){
+    else if (input == "ar" || input == "AR" || input == "Arkansas" || input == "arkansas"){
     document.getElementById("abbr").innerHTML = ar[0];
     document.getElementById("name").innerHTML = ar[1];
     document.getElementById("capital").innerHTML = ar[2];
     document.getElementById("population").innerHTML = ar[3];
     }
 
-    if (input == "ca" || input == "CA" || input == "California" || input == "california"){
+    else if (input == "ca" || input == "CA" || input == "California" || input == "california"){
     document.getElementById("abbr").innerHTML = ca[0];
     document.getElementById("name").innerHTML = ca[1];
     document.getElementById("capital").innerHTML = ca[2];
     document.getElementById("population").innerHTML = ca[3];
     }
 
-    if (input == "co" || input == "CO" || input == "Colorado" || input == "colorado"){
+    else if (input == "co" || input == "CO" || input == "Colorado" || input == "colorado"){
     document.getElementById("abbr").innerHTML = co[0];
     document.getElementById("name").innerHTML = co[1];
     document.getElementById("capital").innerHTML = co[2];
     document.getElementById("population").innerHTML = co[3];
     }
+   
     else{
         window.alert("you didn't enter a state. Please try again.");
         reset();
@@ -214,12 +215,12 @@ function reset(){
     <div class="col-sm-4">
     <form name="myform">
     <table id="table">
-    
+  
     <tr>
         <td>Enter a State:</td>
         <td><input type ="text" name="input"></td>
     </tr>
-   
+    
     <tr>
         <td>State Abbr</td>
         <td id="abbr"></td>
