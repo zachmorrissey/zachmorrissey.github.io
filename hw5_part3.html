@@ -212,13 +212,14 @@ function reset(){
    <div class="col-sm-4">
   </div>
     <div class="col-sm-4">
-    <table id="table">
     <form name="myform">
+    <table id="table">
+    
     <tr>
         <td>Enter a State:</td>
         <td><input type ="text" name="input"></td>
     </tr>
-    </form>
+   
     <tr>
         <td>State Abbr</td>
         <td id="abbr"></td>
@@ -236,8 +237,9 @@ function reset(){
         <td id="population"></td>
     </tr>
 </table>
+</form>
     <input type="submit" class="btn btn-info" onclick="process()"  value="SUBMIT">
-    <input type="reset" class="btn btn-info" onclick="reset()"value="RESET">
+    <input type="reset" class="btn btn-info" onclick="reset() "value="RESET">
 
     </div>
     <div class="col-sm-4">
