@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.col-sm-6{
+    text-align: left;
+}
+
+#table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td, #table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+<script>
+  function process(){
+   
+   
+    var al = ["AL", "Alabama", "Montgomery", 4777736];
+    var ak = ["AK", "Alaska", "Juneau", 710231];
+    var az = ["AZ", "Arizona", "Phoenix", 6392017];
+    var ar = ["AR", "Arkansas", "Little Rock", 2915918];
+    var ca = ["CA", "California", "Sacramento", 37253956];
+    var co = ["CO", "Colorado", "Denver", 5029196];
+    var input = document.forms["myform"].elements["input"].value;
+    var i;
+  
+    var allstates = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California','Colorado','Connecticut','Delaware','Florida','Georgia','Guam','Hawaii','Idaho',
+    'Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands',
+    'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska',
+    'Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota',
+    'Northern Mariana Islands','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina',
+    'South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming',
+    'AL','AK','AS','AZ','AR','CA','CO','CT','DE','DC','FM','FL','GA','GU','HI',
+    'ID','IL','IN','IA','KS','KY','LA','ME','MH','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM',
+    'NY','NC','ND','MP','OH','OK','OR','PW','PA','PR','RI','SC','SD','TN','TX','UT','VT','VI','VA','WA','WV','WI','WY', 
+    'alabama', 'alaska','arizona','arkansas','california','colorado','connecticut','delaware',
+    'florida','georgia','hawaii','idaho','illinois','indiana',
+    'iowa','kansas','kentucky','louisiana','maine','maryland','massachusetts','michigan','minnesota','mississippi','missouri',
+    'montana','nebraska','nevada','new hampshire','new jersey','new mexico','new york','north carolina','north dakota',
+    'ohio','oklahoma','oregon','pennsylvania','rhode island','south carolina','south dakota','tennessee','texas','utah','vermont',
+    'virginia','washington','west virginia','wsconsin','wyoming'];
+    
+    var otherstates = ['Connecticut','Delaware','Florida','Georgia','Guam','Hawaii','Idaho',
+    'Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands',
+    'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska',
+    'Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota',
+    'Northern Mariana Islands','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina',
+    'South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming',
+    'CT','DE','DC','FM','FL','GA','GU','HI',
+    'ID','IL','IN','IA','KS','KY','LA','ME','MH','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM',
+    'NY','NC','ND','MP','OH','OK','OR','PW','PA','PR','RI','SC','SD','TN','TX','UT','VT','VI','VA','WA','WV','WI','WY', 
+    'connecticut','delaware',
+    'florida','georgia','hawaii','idaho','illinois','indiana',
+    'iowa','kansas','kentucky','louisiana','maine','maryland','massachusetts','michigan','minnesota','mississippi','missouri',
+    'montana','nebraska','nevada','new hampshire','new jersey','new mexico','new york','north carolina','north dakota',
+    'ohio','oklahoma','oregon','pennsylvania','rhode island','south carolina','south dakota','tennessee','texas','utah','vermont',
+    'virginia','washington','west virginia','wsconsin','wyoming'];
+
+    
+    
+    for (i=0; i < otherstates.length; i++){
+        if(input == otherstates[i]){
+            window.alert("I'm sorry, I don't support that state. Please try again");
+            reset(); 
+        }
+    }
+    
+    if (input == "al" || input == "AL" || input == "Alabama" || input == "alabama"){
+    document.getElementById("abbr").innerHTML = al[0];
+    document.getElementById("name").innerHTML = al[1];
+    document.getElementById("capital").innerHTML = al[2];
+    document.getElementById("population").innerHTML = al[3];
+    }
+    
+    if (input == "ak" || input == "AK" || input == "Alaska" || input == "alaska"){
+    document.getElementById("abbr").innerHTML = ak[0];
+    document.getElementById("name").innerHTML = ak[1];
+    document.getElementById("capital").innerHTML = ak[2];
+    document.getElementById("population").innerHTML = ak[3];
+    }
+
+    if (input == "az" || input == "AZ" || input == "Arizona" || input == "arizona"){
+    document.getElementById("abbr").innerHTML = az[0];
+    document.getElementById("name").innerHTML = az[1];
+    document.getElementById("capital").innerHTML = az[2];
+    document.getElementById("population").innerHTML = az[3];
+    }
+
+    if (input == "ar" || input == "AR" || input == "Arkansas" || input == "arkansas"){
+    document.getElementById("abbr").innerHTML = ar[0];
+    document.getElementById("name").innerHTML = ar[1];
+    document.getElementById("capital").innerHTML = ar[2];
+    document.getElementById("population").innerHTML = ar[3];
+    }
+
+    if (input == "ca" || input == "CA" || input == "California" || input == "california"){
+    document.getElementById("abbr").innerHTML = ca[0];
+    document.getElementById("name").innerHTML = ca[1];
+    document.getElementById("capital").innerHTML = ca[2];
+    document.getElementById("population").innerHTML = ca[3];
+    }
+
+    if (input == "co" || input == "CO" || input == "Colorado" || input == "colorado"){
+    document.getElementById("abbr").innerHTML = co[0];
+    document.getElementById("name").innerHTML = co[1];
+    document.getElementById("capital").innerHTML = co[2];
+    document.getElementById("population").innerHTML = co[3];
+    }
+    else{
+        window.alert("you didn't enter a state. Please try again.");
+        reset();
+    }
+
+        
+  }
+</script>
+
+<script>
+function reset(){
+    document.getElementById("abbr").innerHTML = "";
+    document.getElementById("name").innerHTML = "";
+    document.getElementById("capital").innerHTML = "";
+    document.getElementById("population").innerHTML = "";
+    document.forms["myform"].elements["input"].value = "";
+    document.forms["myform"].elements["input"].focus();
+  }
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li class="active"><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw5.html">Home</a></li>
+                      <li><a href="hw5_part1.html">Part 1</a></li>
+                      <li><a href="hw5_part2.html">Part 2</a></li>
+                      <li class="active"><a href="hw5_part3.html">Part 3</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+  <h2>CNIT 133 Homework 5 Arrays</h2>
+   <div class="col-sm-4">
+  </div>
+    <div class="col-sm-4">
+    <table id="table">
+    <form name="myform">
+    <tr>
+        <td>Enter a State:</td>
+        <td><input type ="text" name="input"></td>
+    </tr>
+    </form>
+    <tr>
+        <td>State Abbr</td>
+        <td id="abbr"></td>
+    </tr>
+    <tr>
+        <td>State Name</td>
+        <td id="name"></td>
+    </tr>
+    <tr>
+        <td>Capital</td>
+        <td id="capital"></td>
+    </tr>
+    <tr>
+        <td>Population</td>
+        <td id="population"></td>
+    </tr>
+</table>
+    <input type="submit" class="btn btn-info" onclick="process()"  value="SUBMIT">
+    <input type="reset" class="btn btn-info" onclick="reset()"value="RESET">
+
+    </div>
+    <div class="col-sm-4">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>

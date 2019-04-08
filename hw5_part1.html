@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h2 {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.col-sm-6{
+    text-align: left;
+}
+  </style>
+<script>
+  function process(){
+    var age, name, movie, genre; 
+    name = document.forms["myform"].elements["name"].value; 
+    age = document.forms["myform"].elements["age"].value;
+    movie = document.forms["myform"].elements["likemovie"].value;
+   
+   radio = document.forms[0];
+   var k; 
+   for(k = 0; k < radio.length; k++){
+     if (radio[k].checked == false){
+       window.alert("you didn't choose a radio option");
+       break;
+     }
+   }
+   
+    genre = document.forms[0];
+    var i; 
+    for (i = 0; i<genre.length; i++){
+      if (genre[i].checked == false){
+        window.alert("You didn't choose a box option");
+        break;
+      }
+      }
+    
+
+    if (name == "")
+    window.alert("You didn't fill out Name");
+    if (age == "")
+    window.alert("You didn't fill out your age")
+    if (movie == " ")
+    window.alert("You didn't choose a favorite movie") 
+
+    
+
+  }
+
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li class="active"><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw5.html">Home</a></li>
+                      <li class="active"><a href="hw5_part1.html">Part 1</a></li>
+                      <li><a href="hw5_part2.html">Part 2</a></li>
+                      <li><a href="hw5_part3.html">Part 3</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+  <h2>CNIT 133 Homework 5 Arrays</h2>
+   <div class="col-sm-4">
+  </div>
+    <div class="col-sm-6">
+            <h1>Feedback</h1>
+  
+            
+                <p> 
+                    I want to ask some basic likes and dislikes. 
+                </p>
+                <br>
+                <form name="myform" action="mailto:zachmorrissey06@gmail.com" method="post" enctype="text/plain">
+                    <fieldset>
+                    Your Name: <input type="text" name="name" required autofocus><br>
+                    Your Age: <input type="number" name="age" >
+                   
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                    Choose Favorite Movie from here:
+                    <select name="likemovie">
+                            <option value=" ">-Choose one-</option>
+                            <option value="la la land">La La Land</option>
+                            <option value="Mad Max">Mad Max:Fury Road</option>
+                            <option value="Pulp Fiction">Pulp Fiction</option>
+                            <option value="The Dark Knight">The Dark Knight</option>
+                            <option value="her">her</option>
+    
+                    </select>
+                    </fieldset>
+                    <br><br>
+                    Favorite Genre of Film: (Choose these 3)<br>
+    
+                    <table class="tabspace">
+                    <tr>
+    
+                    <td class="tab"><input type="checkbox" name="genre" value="Action" checked>Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    
+                    <td class="tab"><input type="checkbox" name="genre"  value="Comedy">Comedy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    
+                    <td class="tab"><input type="checkbox"  name="genre" value="Drama">Drama</td>
+                    </tr>
+                  </table>
+                  <br>
+                  <table class="tabspace">
+                    Favorite Genre of Film: (Choose these 3)<br>
+                    <tr>
+                    
+                    <td class="tab"><input type="radio"  name="radio" value="Social">Social&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    
+                    <td class="tab"><input type="radio"  name="radio" value="Thriller">Thriller&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    
+                    <td class="tab"><input type="radio"  name="radio" value="Satire">Satire&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    
+                    </tr>   
+                    </table>
+                   
+                    <br>
+                    
+    
+                            <h3>Comments/Questions</h3>
+    
+                            <textarea name="comments" rows="7"></textarea><br>
+    
+                            <input type="submit" class="btn btn-info" onclick="process()" value="SUBMIT">
+                   </form>
+
+    </div>
+    <div class="col-sm-2">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>

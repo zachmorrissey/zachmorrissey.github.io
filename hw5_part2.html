@@ -31,10 +31,16 @@ p {
     transform: translatex(-50%);
 }
 .col-sm-6{
-    text-align: left;
+    text-align: center;
 }
   </style>
 
+  <script>
+function goToNewPage(myForm) {
+    var myDestination = myForm.destinationList.options[myForm.destinationList.selectedIndex].value;
+    window.location = myDestination;
+}
+</script>
 </head>
 <body>
 
@@ -61,9 +67,9 @@ p {
         <nav class="navbar navbar-default">
                 <div class="container-fluid">
                   <ul class="nav navbar-nav navbar-center">
-                      <li class="active"><a href="hw5.html">Home</a></li>
+                      <li><a href="hw5.html">Home</a></li>
                       <li><a href="hw5_part1.html">Part 1</a></li>
-                      <li><a href="hw5_part2.html">Part 2</a></li>
+                      <li class="active"><a href="hw5_part2.html">Part 2</a></li>
                       <li><a href="hw5_part3.html">Part 3</a></li>
                   </ul>
                 </div>
@@ -72,15 +78,35 @@ p {
 
               
   <h2>CNIT 133 Homework 5 Arrays</h2>
-   <div class="col-sm-4">
+   <div class="col-sm-3">
   </div>
     <div class="col-sm-6">
-            <h1>Part 1 - Form Validation</h1>
-            <h1>Part 2 - Website Launcher</h1>
-            <h1>Part 1 - State Information</h1>
-  
+<form>
+   <h3>Choose your destination (using onChange event handler)</h3>
+<select name="destinationList" onChange="goToNewPage(this.form);">
+<option>Choose Destination:</option>
+<option value="http://www.youtube.com/">Youtube</option>
+<option value="https://www.reddit.com/r/frugalmalefashion">Frugal Male Fashion</option>
+<option value="https://www.gmail.com">Gmail</option>
+<option value="https://www.mixcloud.com/">Mixcloud</option>
+</select>
+</form>
+
+<br><br>
+
+<form>
+<h3>Choose your destination (using onClick event handler)</h3>
+<select name="destinationList">
+<option value="http://www.youtube.com/">Youtube</option>
+<option value="https://www.reddit.com/r/frugalmalefashion">Frugal Male Fashion</option>
+<option value="https://www.gmail.com">Gmail</option>
+<option value="https://www.mixcloud.com/">Mixcloud</option>
+</select>
+<input type="button" value="Go" onClick="goToNewPage(this.form);">
+</form>
+
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
     </div>
 
         
