@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW6 Part 2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h1,h2,h4, h5, form {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
+
+  </style>
+    <script>
+    function displayerror(){
+        window.alert("Inavlid input, please try again");
+    }
+    function process(){
+    var string = document.forms["myform"].elements["string"].value; 
+    var charsearch = document.forms["myform"].elements["charsearch"].value;
+    var recheck = /^[a-zA-Z]{1}$/;
+    var regex = new RegExp(charsearch,"g");
+
+    if(!recheck.test(charsearch)){
+        document.forms["myform"].elements["charsearch"].value = "";
+        document.forms["myform"].elements["result"].value = "";
+        document.forms["myform"].elements["charsearch"].focus();
+        displayerror(); 
+    }
+    
+    
+    else if(!string.match(regex)){
+       
+        var myWindow = window.open("", "myWindow", "width=300,height=100");
+        myWindow.document.write("<p>Search character not found in text string! You entered: "+charsearch +"</p>");
+        document.forms["myform"].elements["charsearch"].value = "";
+        document.forms["myform"].elements["result"].value = "";
+        document.forms["myform"].elements["charsearch"].focus();
+    } 
+    else{
+    var result = (string.match(regex).length);
+
+
+    document.forms["myform"].elements["result"].value = result; 
+    }
+
+    }
+    
+    </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li  class="active"><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw6.html">Home</a></li>
+                      <li><a href="hw6_part1.html">Part 1</a></li>
+                      <li  class="active"><a href="hw6_part2.html">Part 2</a></li>
+                      <li><a href="hw6_part3.html">Part 3</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 6 Objects</h2>
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+        <h2>Enter a string</h2>
+    
+    <form name="myform">
+        <textarea rows="5" cols="40" name="string">
+        </textarea>
+        <br>
+        <h2>Enter a single character</h2>
+        <input type="text" name="charsearch">
+        <br><br>
+        <textarea rows="5" cols="40" name="result">
+        </textarea>
+        <br><br>
+        <input type="button" class="btn btn-info" onclick="process()" value="Submit">
+        
+       
+ </form>
+
+    </div>
+    <div class="col-sm-3">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>

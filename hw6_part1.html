@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW6 Part 1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h1,h2,h4, h5, form {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border-style: groove;
+    padding: 15px;
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
+
+  </style>
+    <script>
+    function displayerror(){
+        window.alert("Inavlid input, please try again");
+    }
+    function process(){
+    var input = document.forms["myform2"].elements["input"].value; 
+    input = parseFloat(input);
+    decregex = /\d{1,}.{4,}\d/;
+    
+    if (!decregex.test(input)){
+        document.forms["myform2"].elements["input"].value = "";
+        document.forms["myform2"].elements["input"].focus();
+        displayerror();
+        
+    }
+    else{
+    var answer1, answer2, answer3, answer4, answer5, tmp; 
+
+    answer1 = Math.round(input);
+    document.getElementById("answer1").innerHTML = answer1;
+    
+
+    answer2 = Math.sqrt(input);
+    answer2 = Math.round(answer2);
+    document.getElementById("answer2").innerHTML = answer2;
+
+    answer3 = (Math.round(input * 10) / 10).toFixed(2);
+    document.getElementById("answer3").innerHTML = answer3;
+
+    answer4 = (Math.round(input * 100) / 100).toFixed(3);
+    document.getElementById("answer4").innerHTML = answer4;
+
+    answer5 = (Math.round(input * 1000) / 1000).toFixed(4);
+    document.getElementById("answer5").innerHTML = answer5;
+    }
+    }
+    </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li  class="active"><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw6.html">Home</a></li>
+                      <li class="active"><a href="hw6_part1.html">Part 1</a></li>
+                      <li><a href="hw6_part2.html">Part 2</a></li>
+                      <li><a href="hw6_part3.html">Part 3</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 6 Objects</h2>
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+        <form name="myform2">
+            <table>
+                <th>Enter a number with 4 decimal points:</th>
+                <th><input type="text" name="input"></th>
+            </table>
+            <input type="button" class="btn btn-info" onclick="process()" value="Submit">
+        </form>
+    
+    <form name="myform">
+        <table>
+            <tr>
+              <th>Description</th>
+              <th>Answer</th>
+            </tr>
+             <tr>
+                 <td>Math.round</td>  
+                 <td id="answer1"></td>
+             </tr>
+             <tr>
+                <td>Square Root</td>
+               <td id="answer2"></td>
+             </tr>
+             <tr>
+                <td>Nearest tenth position</td>  
+                <td id="answer3"></td>
+            </tr>
+            <tr>
+                <td>Nearest hundredths position</td>
+              <td id="answer4"></td>
+            </tr>
+            <tr>
+                <td>Nearest thousandths position</td>
+                <td id="answer5"></td>
+                </tr>
+        </table>
+ </form>
+
+    </div>
+    <div class="col-sm-3">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>

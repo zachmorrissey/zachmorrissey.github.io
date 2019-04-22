@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW6 Part 3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <style>
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+h1,h2,h4, h5, form {
+    text-align: center;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+th, td {
+    border: 0px;
+   
+}
+td {
+  text-align: center;
+}
+tr {
+    text-align: left;
+}
+th {
+  text-align: center;
+}
+table {
+    width: 100%;
+    border: 3px;
+    border-style: groove;
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  border: solid 1px #c3c3c3;
+  background-color:#f8f8f8;
+}
+#flip{
+    cursor: pointer;
+}
+#panel {
+  padding: 10px;
+  display: none;
+  background-color:#f8f8f8;
+}
+
+  </style>
+  <script>
+        $(document).ready(function(){
+        $('input[name="date"]').mask('00/00/0000');
+        $('input[name="postal-code"]').mask('S0S 0S0');
+        $('input[name="phone-number"]').mask('(000) 000-0000');
+        
+        $('input[name="postal-code"]').focusout(function() {
+           $('input[name="postal-code"]').val( this.value.toUpperCase() );
+        });
+        });
+        </script>
+  <script>
+  function dates(){
+    var current = new Date();
+
+    var local = new Date(); 
+    local = local.toLocaleDateString();
+
+    var string = new Date();
+    string = string.toString();
+
+    var utc = new Date();
+    utc = utc.toUTCString();
+
+    var pst_utc = new Date();
+    pst_utc = pst_utc.getTimezoneOffset()/60;
+
+    var est_utc = new Date();
+    est_utc = est_utc.getTimezoneOffset()/60+3;
+
+    document.getElementById("current").innerHTML = current;
+    document.getElementById("local").innerHTML = local;
+    document.getElementById("string").innerHTML = string;
+    document.getElementById("utc").innerHTML = utc;
+    document.getElementById("pst_utc").innerHTML = pst_utc;
+    document.getElementById("est_utc").innerHTML = est_utc;
+  }
+  </script>
+    <script>
+    function displayerror(){
+        window.alert("Inavlid input, please try again");
+    }
+    function process(){
+    
+        var inputp = document.forms["myform"].elements["phone-number"].value;
+        var re_number = /^\(\d{3}\)/;
+        var pnumber = inputp.split(re_number);
+        document.forms["myform"].elements["pnumber"].value = pnumber[1];
+
+        var inputa = document.forms["myform"].elements["phone-number"].value;
+        var re_area = /(\s).{8}/;
+        var areacode = inputa.split(re_area);
+        document.forms["myform"].elements["areacode"].value = areacode[0];
+    
+
+    
+    }
+   
+    </script>
+
+</head>
+<body onload="dates();">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li  class="active"><a href="hw6.html">HW 6</a></li>
+        <li><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw6.html">Home</a></li>
+                      <li><a href="hw6_part1.html">Part 1</a></li>
+                      <li><a href="hw6_part2.html">Part 2</a></li>
+                      <li class="active"><a href="hw6_part3.html">Part 3</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 6 Objects</h2>
+   <div class="col-sm-3">
+  </div>
+    <div class="col-sm-6">
+        <form name="myform">
+        <table>
+            <tr>
+            <td>Current date and time:</td>
+            <td id= "current"></td>
+            </tr>
+
+            <tr>
+                <td>toLocaleString:</td>
+                <td id= "local"></td>
+            </tr>
+
+            <tr>
+                <td>toString:</td>
+                <td id= "string"></td>
+            </tr>
+
+            <tr>
+                <td>toUTCString:</td>
+                <td id= "utc"></td>
+            </tr>
+            <tr>
+                <td>Hour difference between PST and UTC</td>
+                <td id= "pst_utc"></td>
+            </tr>
+            <tr>
+                <td>Hour difference between EST and UTC</td>
+                <td id= "est_utc"></td>
+            </tr>
+        </table>
+        <h2>Enter a phone number</h2>
+        <p>
+            <input type="text" name="phone-number" />
+        </p>
+        <br>
+        <input type="button" class="btn btn-info" onclick="process()" value="Submit">
+        <br>
+
+        <h2>Area Code</h2>
+        <p>
+                <textarea rows="1" cols="25" name="areacode">
+                </textarea>
+        </p>
+        <h2>Phone Number</h2>
+        <p>
+                <textarea rows="1" cols="25" name="pnumber">
+                </textarea>
+        </p>
+       
+ </form>
+
+    </div>
+    <div class="col-sm-3">
+    </div>
+
+        
+  </div>
+
+</body>
+</html>
