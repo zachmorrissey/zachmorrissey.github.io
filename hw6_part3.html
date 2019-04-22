@@ -97,7 +97,7 @@ table {
     pst_utc = pst_utc.getTimezoneOffset()/60;
 
     var est_utc = new Date();
-    est_utc = est_utc.getTimezoneOffset()/60+3;
+    est_utc = est_utc.getTimezoneOffset()/60-3;
 
     document.getElementById("current").innerHTML = current;
     document.getElementById("local").innerHTML = local;
