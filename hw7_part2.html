@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW7</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+  <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+        
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        function myFunction(a) {
+        a.parentNode.getElementsByClassName("dropdown-content")[0].classList.toggle("show");
+        }
+
+        </script>
+  <style>
+      .arialFont {
+    font-family: Arial;
+}
+.blue {
+    background-color: blue;
+}
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.pink {
+    background-color: pink;
+}
+.italic {font-style:italic;}
+.normal {font-style:normal;}
+.bold {font-weight:bold;}
+.normal {font-weight:normal;}
+.small {
+    font-size: 10px;
+}
+.medium {
+    font-size: 14px;
+}
+.large {
+    font-size: 18px;
+}
+  .center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.timesnewroman{
+    font-family:'Times New Roman', Times, serif;
+}
+h3{
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    cursor: pointer;
+}
+
+p {
+  font-size: large;
+}
+.container 
+{ 
+    border-style: ridge;
+    border-color: grey;
+    background-color: white;
+}
+.navbar-nav.navbar-center{
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.blue {
+    background-color:blue;
+}
+.orange {
+    background-color: orange;
+}
+.red{
+    background-color: red;
+}
+.arial {
+    font-family: arial;
+}
+a:link{
+text-decoration: none;
+}
+a{
+color: white;
+}
+.dropbtn {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+	border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+   background-color: #fff;
+    background-clip: padding-box;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 0.7em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.col-sm-6{
+    text-align: center;
+}
+.dropdown a:hover {background-color: #333; color: white; font-weight: bold;}
+
+.show {display:block;}
+  </style>
+</head>
+<body id="body">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Cnit 133</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">HW 2</a></li>
+        <li><a href="hw3.html">HW 3</a></li>
+        <li><a href="hw4.html">HW 4</a></li>
+        <li><a href="hw5.html">HW 5</a></li>
+        <li><a href="hw6.html">HW 6</a></li>
+        <li class="active"><a href="hw7.html">HW 7</a></li>
+        <li><a href="hw8.html">HW 8</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  <div class="container">
+    
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <ul class="nav navbar-nav navbar-center">
+                      <li><a href="hw7.html">Home</a></li>
+                      <li><a href="hw7_part1.html">Part 1</a></li>
+                      <li class="active"><a href="hw7_part2.html">Part 2</a></li>
+                      <li><a href="hw7_part3.html">Part 3</a></li>
+                  </ul>
+                </div>
+              </nav> 
+            
+
+              
+    <h2>CNIT 133 Homework 7 Object Model and Miscellaneous jQuery</h2>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+    <h3>Part 2 - Dropdown Menus</h3>  
+    <button class="dropbtn"><a href="index.html">HW1</a></button>
+    
+    <div class="dropdown">
+            <button onclick="myFunction(this)" class="dropbtn">HW2</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="hw2.html">Home</a>
+                <a href="hw2_part1.html">Part 1</a>
+                <a href="hw2_part2.html">Part 2</a>
+                <a href="hw2_part3.html">Part 3</a>
+                <a href="hw2_part4.html">Part 4</a>
+                <a href="hw2_ec.html">Extra Credit</a>
+              </div>
+    </div>
+
+    <div class="dropdown">
+            <button onclick="myFunction(this)" class="dropbtn">HW3</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="hw3.html">Home</a>
+                <a href="hw3_part1.html">Part 1</a>
+                <a href="hw3_part2.html">Part 2</a>
+                <a href="hw3_part3.html">Part 3</a>
+                <a href="hw3_part4.html">Part 4</a>
+              </div>
+    </div>
+
+    <div class="dropdown">
+            <button onclick="myFunction(this)" class="dropbtn">HW4</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="hw3.html">Home</a>
+                <a href="hw3_part1.html">Part 1</a>
+                <a href="hw3_part2.html">Part 2</a>
+              </div>
+    </div>
+
+    <div class="dropdown">
+            <button onclick="myFunction(this)" class="dropbtn">HW5</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="hw3.html">Home</a>
+                <a href="hw3_part1.html">Part 1</a>
+                <a href="hw3_part2.html">Part 2</a>
+                <a href="hw3_part3.html">Part 3</a>
+              </div>
+    </div>
+
+    <div class="dropdown">
+            <button onclick="myFunction(this)" class="dropbtn">HW6</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="hw3.html">Home</a>
+                <a href="hw3_part1.html">Part 1</a>
+                <a href="hw3_part2.html">Part 2</a>
+                <a href="hw3_part3.html">Part 3</a>
+              </div>
+    </div>
+
+    </div>
+    <div class="col-sm-3">
+      </div>
+        
+  
+</div>
+</body>
+</html>
