@@ -1,0 +1,1691 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <script src="//customersuccess.sensehq.com/snippet.js"></script>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-29eea644ab3b93e98cc",applicationID:"400800966"};;/*! For license information please see nr-loader-rum-1.239.1.min.js.LICENSE.txt */
+(()=>{"use strict";var e,t,n={763:(e,t,n)=>{n.d(t,{P_:()=>g,Mt:()=>h,C5:()=>s,DL:()=>b,OP:()=>j,lF:()=>k,Yu:()=>w,Dg:()=>p,CX:()=>c,GE:()=>y,sU:()=>T});var r=n(632),i=n(567);const a={beacon:r.ce.beacon,errorBeacon:r.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},o={};function s(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!o[e])throw new Error("Info for ".concat(e," was never set"));return o[e]}function c(e,t){if(!e)throw new Error("All info objects require an agent identifier!");o[e]=(0,i.D)(t,a),(0,r.Qy)(e,o[e],"info")}var d=n(56);const u=()=>{const e={blockSelector:"[data-nr-block]",maskInputOptions:{password:!0}};return{privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},metrics:{enabled:!0,autoStart:!0},page_action:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1,autoStart:!0},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},harvest:{tooManyRequestsDelay:60},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,sampleRate:.1,errorSampleRate:.1,maskTextSelector:"*",maskAllInputs:!0,get blockClass(){return"nr-block"},get ignoreClass(){return"nr-ignore"},get maskTextClass(){return"nr-mask"},get blockSelector(){return e.blockSelector},set blockSelector(t){e.blockSelector+=",".concat(t)},get maskInputOptions(){return e.maskInputOptions},set maskInputOptions(t){e.maskInputOptions={...t,password:!0}}},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0}}},l={},f="All configuration objects require an agent identifier!";function g(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,i.D)(t,u()),(0,r.Qy)(e,l[e],"config")}function h(e,t){if(!e)throw new Error(f);var n=g(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const v={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},m={};function b(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!m[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return m[e]}function y(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");m[e]=(0,i.D)(t,v),(0,r.Qy)(e,m[e],"loader_config")}const w=(0,r.mF)().o;var A=n(385),x=n(818);const D={buildEnv:x.Re,customTransaction:void 0,disabled:!1,distMethod:x.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(A._A?.performance?.timeOrigin||A._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+A._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof A._A.XMLHttpRequest?.prototype?.addEventListener,version:x.q4,denyList:void 0},E={};function j(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!E[e])throw new Error("Runtime for ".concat(e," was never set"));return E[e]}function T(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");E[e]=(0,i.D)(t,D),(0,r.Qy)(e,E[e],"runtime")}function k(e){return function(e){try{const t=s(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},567:(e,t,n)=>{n.d(t,{D:()=>i});var r=n(50);function i(e,t){try{if(!e||"object"!=typeof e)return(0,r.Z)("Setting a Configurable requires an object as input");if(!t||"object"!=typeof t)return(0,r.Z)("Setting a Configurable requires a model to set its initial properties");const n=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(n).length?e:n;for(let o in a)if(void 0!==e[o])try{"object"==typeof e[o]&&"object"==typeof t[o]?n[o]=i(e[o],t[o]):n[o]=e[o]}catch(e){(0,r.Z)("An error occurred while setting a property of a Configurable",e)}return n}catch(e){(0,r.Z)("An error occured while setting a Configurable",e)}}},818:(e,t,n)=>{n.d(t,{Re:()=>i,gF:()=>a,q4:()=>r});const r="1.239.1",i="PROD",a="CDN"},385:(e,t,n)=>{n.d(t,{Nk:()=>d,Tt:()=>o,_A:()=>a,il:()=>r,ux:()=>s,v6:()=>i,w1:()=>c});const r="undefined"!=typeof window&&!!window.document,i="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=r?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=(a?.location,/iPad|iPhone|iPod/.test(navigator.userAgent)),s=o&&"undefined"==typeof SharedWorker,c=((()=>{const e=navigator.userAgent.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Boolean(r&&window.document.documentMode)),d=!!navigator.sendBeacon},711:(e,t,n)=>{n.d(t,{w:()=>a});var r=n(50);const i={agentIdentifier:"",ee:void 0};class a{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},0:(e,t,n)=>{n.d(t,{L:()=>u,R:()=>c});var r=n(148),i=n(284),a=n(322),o=n(325);const s={};function c(e,t){const n={staged:!1,priority:o.p[t]||0};d(e),s[e].get(t)||s[e].set(t,n)}function d(e){e&&(s[e]||(s[e]=new Map))}function u(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(d(e),!e||!s[e].get(t))return o(t);s[e].get(t).staged=!0;const n=[...s[e]];function o(t){const n=e?r.ee.get(e):r.ee,o=a.X.handlers;if(n.backlog&&o){var s=n.backlog[t],c=o[t];if(c){for(var d=0;s&&d<s.length;++d)l(s[d],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete o[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}n.every((e=>{let[t,n]=e;return n.staged}))&&(n.sort(((e,t)=>e[1].priority-t[1].priority)),n.forEach((t=>{let[n]=t;s[e].delete(n),o(n)})))}function l(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],a=e[3],o=e[2];i.apply(a,o)}}))}},148:(e,t,n)=>{n.d(t,{A:()=>c,ee:()=>d});var r=n(632),i=n(210),a=n(763);class o{constructor(e){this.contextId=e}}var s=n(117);const c="nr@context:".concat(s.a),d=function e(t,n){var r={},s={},u={},f=!1;try{f=16===n.length&&(0,a.OP)(n).isolatedBacklog}catch(e){}var g={on:h,addEventListener:h,removeEventListener:function(e,t){var n=r[e];if(!n)return;for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)},emit:function(e,n,r,i,a){!1!==a&&(a=!0);if(d.aborted&&!i)return;t&&a&&t.emit(e,n,r);for(var o=p(r),c=v(e),u=c.length,l=0;l<u;l++)c[l].apply(o,n);var f=b()[s[e]];f&&f.push([g,e,n,o]);return o},get:m,listeners:v,context:p,buffer:function(e,t){const n=b();if(t=t||"feature",g.aborted)return;Object.entries(e||{}).forEach((e=>{let[r,i]=e;s[i]=t,t in n||(n[t]=[])}))},abort:l,aborted:!1,isBuffering:function(e){return!!b()[s[e]]},debugId:n,backlog:f?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return g;function p(e){return e&&e instanceof o?e:e?(0,i.X)(e,c,(()=>new o(c))):new o(c)}function h(e,t){r[e]=v(e).concat(t)}function v(e){return r[e]||[]}function m(t){return u[t]=u[t]||e(g,t)}function b(){return g.backlog}}(void 0,"globalEE"),u=(0,r.fP)();function l(){d.aborted=!0,d.backlog={}}u.ee||(u.ee=d)},546:(e,t,n)=>{n.d(t,{E:()=>r,p:()=>i});var r=n(148).ee.get("handle");function i(e,t,n,i,a){a?(a.buffer([e],i),a.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},322:(e,t,n)=>{n.d(t,{X:()=>a});var r=n(546);a.on=o;var i=a.handlers={};function a(e,t,n,a){o(a||r.E,i,e,t,n)}function o(e,t,n,i,a){a||(a="feature"),e||(e=r.E);var o=t[a]=t[a]||{};(o[n]=o[n]||[]).push([e,i])}},239:(e,t,n)=>{n.d(t,{bP:()=>s,iz:()=>c,m$:()=>o});var r=n(385);let i=!1,a=!1;try{const e={get passive(){return i=!0,!1},get signal(){return a=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function o(e,t){return i||a?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,o(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,o(n,r))}},117:(e,t,n)=>{n.d(t,{a:()=>r});const r=(0,n(402).Rl)()},402:(e,t,n)=>{n.d(t,{Rl:()=>o,ky:()=>s});var r=n(385);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(31))),i.split("").map((e=>"x"===e?a(t,++n).toString(16):"y"===e?(3&a()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(31)));const o=[];for(var s=0;s<e;s++)o.push(a(n,++i).toString(16));return o.join("")}},56:(e,t,n)=>{n.d(t,{Bq:()=>r,Hb:()=>a,oD:()=>i});const r="NRBA",i=144e5,a=18e5},894:(e,t,n)=>{function r(){return Math.round(performance.now())}n.d(t,{z:()=>r})},50:(e,t,n)=>{function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},587:(e,t,n)=>{n.d(t,{N:()=>c,T:()=>d});var r=n(148),i=n(546),a=n(325);const o={stn:[a.D.sessionTrace],err:[a.D.jserrors,a.D.metrics],ins:[a.D.pageAction],spa:[a.D.spa],sr:[a.D.sessionReplay,a.D.sessionTrace]},s=new Set;function c(e,t){const n=r.ee.get(t);e&&"object"==typeof e&&(s.has(t)||Object.entries(e).forEach((e=>{let[t,r]=e;o[t]?o[t].forEach((e=>{r?(0,i.p)("feat-"+t,[],void 0,e,n):(0,i.p)("block-"+t,[],void 0,e,n),(0,i.p)("rumresp-"+t,[Boolean(r)],void 0,e,n)})):r&&(0,i.p)("feat-"+t,[],void 0,void 0,n),d[t]=Boolean(r)})),Object.keys(o).forEach((e=>{void 0===d[e]&&(o[e]?.forEach((t=>(0,i.p)("rumresp-"+e,[!1],void 0,t,n))),d[e]=!1)})),s.add(t))}const d={}},210:(e,t,n)=>{n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},284:(e,t,n)=>{n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},351:(e,t,n)=>{n.d(t,{P:()=>a});var r=n(148);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function a(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},960:(e,t,n)=>{n.d(t,{K:()=>o,b:()=>a});var r=n(239);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,r.bP)("load",e,t)}function o(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},632:(e,t,n)=>{n.d(t,{EZ:()=>d,Qy:()=>c,ce:()=>a,fP:()=>o,gG:()=>u,mF:()=>s});var r=n(894),i=n(385);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=o();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,n){let i=o();const a=i.initializedAgents||{},s=a[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.z)(),date:new Date}),i.initializedAgents={...a,[e]:{...s,[n]:t}},i}function d(e,t){o()[e]=t}function u(){return function(){let e=o();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),s(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},956:(e,t,n)=>{n.d(t,{N:()=>i});var r=n(239);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),n,i)}},81:(e,t,n)=>{n.d(t,{gF:()=>a,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>o});const r=n(325).D.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},633:(e,t,n)=>{n.d(t,{Dz:()=>i,OJ:()=>o,qw:()=>a,t9:()=>r});const r=n(325).D.pageViewEvent,i="firstbyte",a="domcontent",o="windowload"},251:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(325).D.pageViewTiming},938:(e,t,n)=>{n.d(t,{W:()=>a});var r=n(763),i=n(148);class a{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,r.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=n,this.blocked=!1}}},144:(e,t,n)=>{n.d(t,{j:()=>v});var r=n(325),i=n(763),a=n(546),o=n(148),s=n(894),c=n(0),d=n(960),u=n(385),l=n(50),f=n(81),g=n(632);function p(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start"].forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let a=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&a.push(e.api[t](...r))})),a.length>1?a:a[0]}(t,...r)}}))}var h=n(587);function v(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},v=arguments.length>2?arguments[2]:void 0,m=arguments.length>3?arguments[3]:void 0,{init:b,info:y,loader_config:w,runtime:A={loaderType:v},exposed:x=!0}=t;const D=(0,g.gG)();y||(b=D.init,y=D.info,w=D.loader_config),(0,i.Dg)(e,b||{}),(0,i.GE)(e,w||{}),y.jsAttributes??={},u.v6&&(y.jsAttributes.isWorker=!0),(0,i.CX)(e,y);const E=(0,i.P_)(e);A.denyList=[...E.ajax?.deny_list||[],...E.ajax?.block_internal?[y.beacon,y.errorBeacon]:[]],(0,i.sU)(e,A),p();const j=function(e,t){t||(0,c.R)(e,"api");const g={};var p=o.ee.get(e),h=p.get("tracer"),v="api-",m=v+"ixn-";function b(t,n,r,a){const o=(0,i.C5)(e);return null===n?delete o.jsAttributes[t]:(0,i.CX)(e,{...o,jsAttributes:{...o.jsAttributes,[t]:n}}),A(v,r,!0,a||null===n?"session":void 0)(t,n)}function y(){}["setErrorHandler","finished","addToTrace","inlineHit","addRelease"].forEach((e=>{g[e]=A(v,e,!0,"api")})),g.addPageAction=A(v,"addPageAction",!0,r.D.pageAction),g.setCurrentRouteName=A(v,"routeName",!0,r.D.spa),g.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,A(v,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",n);(0,l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t,"> was provided."))}else(0,l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return b("application.version",e,"setApplicationVersion",!1);(0,l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e,">."))},g.start=e=>{try{const t=Object.values(r.D);if(void 0===e)e=t;else{if((e=Array.isArray(e)&&e.length?e:[e]).some((e=>!t.includes(e))))return(0,l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(t));e.includes(r.D.pageViewEvent)||e.push(r.D.pageViewEvent)}e.forEach((e=>{p.emit("".concat(e,"-opt-in"))}))}catch(e){(0,l.Z)("An unexpected issue occurred",e)}},g.interaction=function(){return(new y).get()};var w=y.prototype={createTracer:function(e,t){var n={},i=this,o="function"==typeof t;return(0,a.p)(m+"tracer",[(0,s.z)(),e,n],i,r.D.spa,p),function(){if(h.emit((o?"":"no-")+"fn-start",[(0,s.z)(),i,o],n),o)try{return t.apply(this,arguments)}catch(e){throw h.emit("fn-err",[arguments,this,e],n),e}finally{h.emit("fn-end",[(0,s.z)()],n)}}}};function A(e,t,n,i){return function(){return(0,a.p)(f.xS,["API/"+t+"/called"],void 0,r.D.metrics,p),i&&(0,a.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,p),n?void 0:this}}function x(){n.e(75).then(n.bind(n,438)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>(0,l.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{w[e]=A(m,e,void 0,r.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,a.p)(f.xS,["API/noticeError/called"],void 0,r.D.metrics,p),(0,a.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,p)},u.il?(0,d.b)((()=>x()),!0):x(),g}(e,m);return(0,g.Qy)(e,j,"api"),(0,g.Qy)(e,x,"exposed"),(0,g.EZ)("activatedFeatures",h.T),j}},325:(e,t,n)=>{n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8,[r.sessionReplay]:9}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var a=r[e]={exports:{}};return n[e](a,a.exports,i),a.exports}i.m=n,i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>"nr-rum.1efcb83a-1.239.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.239.1.PROD:",i.l=(n,r,a,o)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==n||l.getAttribute("data-webpack")==t+a){s=l;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=n),e[n]=[r];var f=(t,r)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},g=setTimeout(f.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=f.bind(null,s.onerror),s.onload=f.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={50:0,832:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var a=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var a=n&&("load"===n.type?"missing":n.type),o=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,a,[o,s,c]=n,d=0;if(o.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);d<o.length;d++)a=o[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},n=self["webpackChunk:NRBA-1.239.1.PROD"]=self["webpackChunk:NRBA-1.239.1.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{var e=i(50);class t{addPageAction(t,n){(0,e.Z)("Call to agent api addPageAction failed. The session trace feature is not currently initialized.")}setPageViewName(t,n){(0,e.Z)("Call to agent api setPageViewName failed. The page view feature is not currently initialized.")}setCustomAttribute(t,n,r){(0,e.Z)("Call to agent api setCustomAttribute failed. The js errors feature is not currently initialized.")}noticeError(t,n){(0,e.Z)("Call to agent api noticeError failed. The js errors feature is not currently initialized.")}setUserId(t){(0,e.Z)("Call to agent api setUserId failed. The js errors feature is not currently initialized.")}setApplicationVersion(t){(0,e.Z)("Call to agent api setApplicationVersion failed. The agent is not currently initialized.")}setErrorHandler(t){(0,e.Z)("Call to agent api setErrorHandler failed. The js errors feature is not currently initialized.")}finished(t){(0,e.Z)("Call to agent api finished failed. The page action feature is not currently initialized.")}addRelease(t,n){(0,e.Z)("Call to agent api addRelease failed. The agent is not currently initialized.")}start(t){(0,e.Z)("Call to agent api addRelease failed. The agent is not currently initialized.")}}var n=i(325),r=i(763);const a=Object.values(n.D);function o(e){const t={};return a.forEach((n=>{t[n]=function(e,t){return!1!==(0,r.Mt)(t,"".concat(e,".enabled"))}(n,e)})),t}var s=i(144);var c=i(546),d=i(385),u=i(0),l=i(938),f=i(960);class g extends l.W{constructor(e,t,n){let i=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.auto=i,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,r.Mt)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto&&(0,u.R)(e,n)}importAggregator(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(this.featAggregate)return;if(!this.auto)return void this.ee.on("".concat(this.featureName,"-opt-in"),(()=>{(0,u.R)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()}));const n=d.il&&!0===(0,r.Mt)(this.agentIdentifier,"privacy.cookies_enabled");let a;this.onAggregateImported=new Promise((e=>{a=e}));const o=async()=>{let r;try{if(n){const{setupAgentSession:e}=await i.e(75).then(i.bind(i,228));r=e(this.agentIdentifier)}}catch(t){(0,e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.",t)}try{if(!this.shouldImportAgg(this.featureName,r))return(0,u.L)(this.agentIdentifier,this.featureName),void a(!1);const{lazyFeatureLoader:e}=await i.e(75).then(i.bind(i,582)),{Aggregate:n}=await e(this.featureName,"aggregate");this.featAggregate=new n(this.agentIdentifier,this.aggregator,t),a(!0)}catch(t){(0,e.Z)("Downloading and initializing ".concat(this.featureName," failed..."),t),this.abortHandler?.(),a(!1)}};d.il?(0,f.b)((()=>o()),!0):o()}shouldImportAgg(e,t){return e!==n.D.sessionReplay||!!r.Yu.MO&&(!1!==(0,r.Mt)(this.agentIdentifier,"session_trace.enabled")&&(!!t?.isNew||!!t?.state.sessionReplay))}}var p=i(633),h=i(894);class v extends g{static featureName=p.t9;constructor(e,t){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(e,t,p.t9,i),("undefined"==typeof PerformanceNavigationTiming||d.Tt)&&"undefined"!=typeof PerformanceTiming){const t=(0,r.OP)(e);t[p.Dz]=Math.max(Date.now()-t.offset,0),(0,f.K)((()=>{t[p.qw]=Math.max((0,h.z)()-t[p.Dz],0)})),(0,f.b)((()=>{const e=(0,h.z)();t[p.OJ]=Math.max(e-t[p.Dz],0),(0,c.p)("timing",["load",e],void 0,n.D.pageViewTiming,this.ee)}))}this.importAggregator()}}var m=i(711),b=i(284);class y extends m.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var a=this.getBucket(e,t,n,i);return a.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,b.D)(e,(function(e,n){t[e]=w(n,t[e])})),t}(r,a.metrics),a}merge(e,t,n,r,i){var a=this.getBucket(e,t,r,i);if(a.metrics){var o=a.metrics;o.count+=n.count,(0,b.D)(n,(function(e,t){if("count"!==e){var r=o[e],i=n[e];i&&!i.c?o[e]=w(i.t,r):o[e]=function(e,t){if(!t)return e;t.c||(t=A(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,o[e])}}))}else a.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=w(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=x(this.aggregatedData[n]),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function w(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=A(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function A(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function x(e){return"object"!=typeof e?[]:(0,b.D)(e,D)}function D(e,t){return t}var E=i(632),j=i(402),T=i(351);var k=i(956),_=i(239),S=i(251);class P extends g{static featureName=S.t;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,S.t,n),d.il&&((0,r.OP)(e).initHidden=Boolean("hidden"===document.visibilityState),(0,k.N)((()=>(0,c.p)("docHidden",[(0,h.z)()],void 0,S.t,this.ee)),!0),(0,_.bP)("pagehide",(()=>(0,c.p)("winPagehide",[(0,h.z)()],void 0,S.t,this.ee))),this.importAggregator())}}var C=i(81);class I extends g{static featureName=C.t9;constructor(e,t){let n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,t,C.t9,n),this.importAggregator()}}new class extends t{constructor(t){let n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,j.ky)(16);super(),d._A?(this.agentIdentifier=n,this.sharedAggregator=new y({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(v),Object.assign(this,(0,s.j)(this.agentIdentifier,t,t.loaderType||"agent")),this.run()):(0,e.Z)("Failed to initial the agent. Could not determine the runtime environment.")}get config(){return{info:(0,r.C5)(this.agentIdentifier),init:(0,r.P_)(this.agentIdentifier),loader_config:(0,r.DL)(this.agentIdentifier),runtime:(0,r.OP)(this.agentIdentifier)}}run(){const t="features";try{const r=o(this.agentIdentifier),i=[...this.desiredFeatures];i.sort(((e,t)=>n.p[e.featureName]-n.p[t.featureName])),i.forEach((t=>{if(r[t.featureName]||t.featureName===n.D.pageViewEvent){const i=function(e){switch(e){case n.D.ajax:return[n.D.jserrors];case n.D.sessionTrace:return[n.D.ajax,n.D.pageViewEvent];case n.D.sessionReplay:return[n.D.sessionTrace];case n.D.pageViewTiming:return[n.D.pageViewEvent];default:return[]}}(t.featureName);i.every((e=>r[e]))||(0,e.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat((0,T.P)(i),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,E.Qy)(this.agentIdentifier,this.features,t)}catch(n){(0,e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",n);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,E.fP)();return delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,r.ee?.abort(),delete r.ee?.get(this.agentIdentifier),!1}}addToTrace(t){(0,e.Z)("Call to agent api addToTrace failed. The page action feature is not currently initialized.")}setCurrentRouteName(t){(0,e.Z)("Call to agent api setCurrentRouteName failed. The spa feature is not currently initialized.")}interaction(){(0,e.Z)("Call to agent api interaction failed. The spa feature is not currently initialized.")}}({features:[v,P,I],loaderType:"lite"})})()})();</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="canonical" href="https://www.veolianorthamerica.com/" />
+<meta name="robots" content="index, follow" />
+<link rel="shortlink" href="https://www.veolianorthamerica.com/" />
+<meta name="description" content="Veolia North America works with organizations across the US and Canada to address their environmental and sustainability challenges in water, waste and energy." />
+<meta property="og:site_name" content="Veolia North America" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.veolianorthamerica.com/" />
+<meta property="og:title" content="Home page" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Veolia_NA" />
+<meta name="twitter:title" content="Home page" />
+<meta name="twitter:url" content="https://www.veolianorthamerica.com/" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NFQXVQM');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="A0wJ8bgqS_sbZdXOgER-t_coXdGwqwkbPWrJwTHG9W0" />
+<!-- WEBSIGHTS -->
+<script>
+(function() {
+var zi = document.createElement('script');
+zi.type = 'text/javascript';
+zi.async = true;
+zi.src = 'https://ws.zoominfo.com/pixel/xLNoCwBZCSXvrF2fCRMd';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(zi, s);
+})();
+</script>
+<meta name="google-site-verification" content="oVlrk4MVyzCt5EUJUJWYnpGWS2r99GWngFUpISLzWOI" />
+<script type="text/javascript">window.gdprAppliesGlobally=true;(function(){function r(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}else{setTimeout(function(){r(e)},5)}}}function e(n,i,o,c,s){function e(e,t,n,r){if(typeof n!=="function"){return}if(!window[i]){window[i]=[]}var a=false;if(s){a=s(e,r,n)}if(!a){window[i].push({command:e,version:t,callback:n,parameter:r})}}e.stub=true;e.stubVersion=2;function t(r){if(!window[n]||window[n].stub!==true){return}if(!r.data){return}var a=typeof r.data==="string";var e;try{e=a?JSON.parse(r.data):r.data}catch(t){return}if(e[o]){var i=e[o];window[n](i.command,i.version,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:i.callId};r.source.postMessage(a?JSON.stringify(n):n,"*")},i.parameter)}}if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");r("__tcfapiLocator");(function(e,t){var n=document.createElement("link");n.rel="preload";n.as="script";var r=document.createElement("script");r.id="spcloader";r.type="text/javascript";r["async"]=true;r.charset="utf-8";var a="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+t;n.href=a;r.src=a;var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(n,i);i.parentNode.insertBefore(r,i)})("bde57b83-6753-44cf-b2df-b2b9d12c32f3","fkJZVa7L")})();</script>
+<script type="text/javascript">window.didomiConfig = {cookies: { didomiTokenCookieName: 'didomi_token_1836', iabCookieName: 'euconsent-v2_1836'}};</script>
+
+<link rel="alternate" type="application/rss+xml" title="Subscribe to Press releases" href="https://www.veolianorthamerica.com/rss-press-releases" />
+<link rel="alternate" type="application/rss+xml" title="Subscribe to Publications" href="https://www.veolianorthamerica.com/rss-publications" />
+<link rel="alternate" type="application/rss+xml" title="Subscribe to Site updates" href="https://www.veolianorthamerica.com/rss-site-updates" />
+<link rel="icon" href="/themes/custom/veo_site/src/assets/icons/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.veolianorthamerica.com/" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/g/files/dvc1836/files/google_tag/primary/google_tag.script.js?s0ltpr" defer></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};var a2a_config = a2a_config || {};
+a2a_config.custom_services = [['QQ', 'https://connect.qq.com/widget/shareqq/index.html?url=A2A_LINKURL_ENC&title=A2A_LINKNAME_ENC', '/themes/custom/veo_site/src/assets/images/qq-black.svg']];
+a2a_config.track_links = 'googl';
+a2a_config.templates.twitter = {
+    text: "${title} ${link} via ${sitename}"
+};
+
+a2a_config.callbacks.push({
+    ready: function() {
+       var sitename = '';
+       if (document.head.querySelector('[name="twitter:site"]')) {
+         sitename = document.head.querySelector('[name="twitter:site"]').content;
+       }
+       a2a_config.templates.twitter.text = a2a_config.templates.twitter.text.replace('${sitename}', sitename);
+       if (window.a2a_custom_init) {window.a2a_custom_init();}
+       return a2a_config;
+    }
+});</script>
+<script>window.veo_theme_path = "/themes/custom/veo_site/build";</script>
+
+    <title>Veolia North America</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/dvc1836/files/css/css_m2lvwK4_foXj66lbOrmELE1KENtizH5iTi2qIQA436M.css" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/dvc1836/files/css/css_bUzLN6JzXchzr-JaGgesMvUzYthfk4kpt2Pe5UB04x8.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/dvc1836/files/css/css_KZFBLssRJ4kqN8gqxKaHpN38laSKQH4UhDsdjV9dMuU.css" />
+<link rel="stylesheet" media="all" href="/themes/custom/veo_site/build/assets/styles/v2.css?s0ltpr" />
+<link rel="stylesheet" media="all" href="/themes/custom/veo_site/build/assets/styles/design_v2.css?s0ltpr" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/4846","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"veolia_platform_didomi":{"menu_title":"Manage My Cookies \/ Do Not Sell or Share","menu_position":"0","videoPlaceholderImg":"","videoConsentTextYouTube":"By playing this video, you load content from YouTube, a service of Google LLC. For information on how Google may use your data see the \u003Ca target=\u0022_google\u0022 href=\u0022https:\/\/privacy.google.com\/businesses\/compliance#gdpr\u0022\u003EGoogle privacy policy\u003C\/a\u003E.","videoConsentTextVimeo":"By playing this video, you load content from Vimeo. For information on how Vimeo may use your data see the \u003Ca target=\u0022_vimeo\u0022 href=\u0022https:\/\/vimeo.com\/privacy\u0022\u003EVimeo privacy policy\u003C\/a\u003E.","videoConsentTextQq":"By playing this video, you load content from Tencent Video, a service of Shenzhen Tencent Computer Systems Co. LTD. For information on how Tencent Video may use your data see the \u003Ca target=\u0027_Tencent\u0027 href=\u0027https:\/\/privacy.qq.com\/document\/priview\/3fab9c7fc1424ebda42c3ce488322c8a\u0027\u003ETencent Video privacy policy guidelines\u003C\/a\u003E.","consentButtonLabel":"I\u0027m ok with this","videoConsentCtaBgClr":"vivid-blue"},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":true,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"ajaxTrustedUrl":{"\/search":true},"ajax":[],"user":{"uid":0,"permissionsHash":"662027718829d91bc5f5a26ed7ec30b725a3275be214faa545abeb2df0b4ab73"}}</script>
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7"></script>
+<script src="/sites/g/files/dvc1836/files/js/js_vp_-9ws8e2otAH30wTQrMd18gzzf2FbHbKY-6k1B-QU.js"></script>
+<script src="/core/misc/modernizr-additional-tests.js?v=3.11.7"></script>
+<script src="/sites/g/files/dvc1836/files/js/js_XfGoGbvQ7Qz4VBDM80YTOh-ifohJLrHAKRWGy-jma_o.js"></script>
+
+  </head>
+  <body class="auto-hyphenation deactivate-active-items">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFQXVQM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<div  class="page-wrapper page-wrapper--homepage">
+  <div class="page-wrapper__content">
+          <header class="header header--sticky-logo-replace">
+                  <div class="header__top">
+                          <div class="header__branding">
+                
+<div class="region-branding">
+  <div class="region-branding__inner">
+    
+
+
+<div  id="block-sitebranding" data-block-plugin-id="system_branding_block" class="branding" >
+      <div class="branding__logo-wrap">
+      <svg class="left-part">
+        <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#left-veolia"></use>
+      </svg>
+      <div class="branding__logo">
+        <a href="/" title="Veolia North America" rel="home">
+          <picture class="branding__logo-img branding__logo-img--mobile">
+            <img src="/sites/g/files/dvc1836/files/styles/logo_mobile_base/public/logo-veolia.png?itok=ej6CZXMv" srcset="/sites/g/files/dvc1836/files/styles/logo_mobile_retina/public/logo-veolia.png?itok=d3FF6nOn 2x" alt="Veolia North America" />
+          </picture>
+          <picture class="branding__logo-img branding__logo-img--sticky">
+            <img src="/themes/custom/veo_site/build/assets/images/temp/logo-sticky.png" alt="Veolia North America" />
+          </picture>
+        </a>
+      </div>
+      <svg class="right-part">
+        <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#right-veolia"></use>
+      </svg>
+    </div>
+        <a class="branding__slogan" href="/" title="Veolia North America" rel="home">Resourcing the world</a>
+  </div>
+
+
+  </div>
+</div>
+              </div>
+                                      <div class="header__navigation">
+                
+
+
+<div  class="top-header">
+  <div class="top-header__navigation">
+    
+<div id="block-vst-secondary-navigation" data-block-plugin-id="system_menu_block:secondary" class="block-menu-secondary">
+  
+  
+  
+
+
+<div class="main-menu main-menu--small">
+    
+  
+            <ul block="vst_secondary_navigation">
+                                          <li  class="header-item-cta" data-menu-children=true>
+        <a href="/about" title="About" data-drupal-link-system-path="node/826">About</a>
+                    
+        
+            <ul class="sub-menu sub-menu--lvl--2">
+        <li class="sub-menu__title">About</li>
+                                  <li  >
+        <a href="/about/diversity-equity-and-inclusion" title="Diversity Equity &amp; Inclusion" data-drupal-link-system-path="node/6156">Diversity Equity &amp; Inclusion</a>
+              </li>
+                              <li  data-menu-children=true>
+        <a href="/about/who-we-are" title="Who we Are" data-drupal-link-system-path="node/1">Who we Are</a>
+                    
+        
+            <ul class="sub-menu sub-menu--lvl--3">
+        <li class="sub-menu__title">Who we Are</li>
+                                  <li  >
+        <a href="/about/our-leadership" title="Our Leadership" data-drupal-link-system-path="node/1586">Our Leadership</a>
+              </li>
+                              <li  >
+        <a href="/about/who-we-are/culture-safety" title="Our Culture of Safety" data-drupal-link-system-path="node/121">Our Culture of Safety</a>
+              </li>
+                              <li  >
+        <a href="/about/who-we-are/resourcing-world" title="Resourcing the World" data-drupal-link-system-path="node/91">Resourcing the World</a>
+              </li>
+            </ul>
+  
+
+              </li>
+                              <li  >
+        <a href="/about/our-purpose" title="Our Purpose" data-drupal-link-system-path="node/5421">Our Purpose</a>
+              </li>
+                              <li  >
+        <a href="/about/our-impact-2023-strategic-program" title="Our Strategic Program" data-drupal-link-system-path="node/5371">Our Strategic Program</a>
+              </li>
+                              <li  >
+        <a href="/eco-transform" title="Ecological Transformation" data-drupal-link-system-path="node/5841">Ecological Transformation</a>
+              </li>
+                              <li  >
+        <a href="/about/innovation/introducing-hubgrade-smart-digital-solutions" title="Hubgrade" data-drupal-link-system-path="node/5546">Hubgrade</a>
+              </li>
+            </ul>
+  
+
+              </li>
+                              <li  data-menu-children=true>
+        <a href="/media" title="Media" data-drupal-link-system-path="node/791">Media</a>
+                    
+        
+            <ul class="sub-menu sub-menu--lvl--2">
+        <li class="sub-menu__title">Media</li>
+                                  <li  >
+        <a href="/media/press-releases" title="Press Releases" data-drupal-link-system-path="node/1601">Press Releases</a>
+              </li>
+                              <li  >
+        <a href="/media/newsroom" title="Newsroom" data-drupal-link-system-path="node/1606">Newsroom</a>
+              </li>
+                              <li  >
+        <a href="https://veolianorthamerica.com/media/media-contacts" title="Media Contacts">Media Contacts</a>
+              </li>
+                              <li  >
+        <a href="https://activities.veolianorthamerica.com/en/25" target="_blank" title="Integrated Services Map">Integrated Services Map</a>
+              </li>
+                              <li  >
+        <a href="/webinars" title="Webinars" data-drupal-link-system-path="node/5966">Webinars</a>
+              </li>
+                              <li  >
+        <a href="/media/regulatory-updates" title="Regulatory Updates" data-drupal-link-system-path="node/106">Regulatory Updates</a>
+              </li>
+            </ul>
+  
+
+              </li>
+                              <li  data-menu-children=true>
+        <a href="/careers" title="Careers" data-drupal-link-system-path="node/6321">Careers</a>
+                    
+        
+            <ul class="sub-menu sub-menu--lvl--2">
+        <li class="sub-menu__title">Careers</li>
+                                  <li  >
+        <a href="https://veolianorthamerica.jobs.net/en-US/search?keywords=&amp;location=" target="_blank" title="Search Job Openings">Search Job Openings</a>
+              </li>
+                              <li  >
+        <a href="/careers/are-you-resourcer" title="Are you a Resourcer?" data-drupal-link-system-path="node/776">Are you a Resourcer?</a>
+              </li>
+            </ul>
+  
+
+              </li>
+                              <li  >
+        <a href="/contact-us/find-office" title="Find an Office" data-drupal-link-system-path="node/4851">Find an Office</a>
+              </li>
+                              <li  class="header-menu-separator" >
+        <a href="/suppliers" title="Suppliers" data-drupal-link-system-path="node/5941">Suppliers</a>
+              </li>
+                              <li  >
+        <a href="https://blog.veolianorthamerica.com/" target="_blank" title="Company Blog">Company Blog</a>
+              </li>
+              <div class="main-menu__long-section">
+        <div class="main-menu__collapse-button"></div>
+        <div class="main-menu__long-section-items"></div>
+      </div>
+        </ul>
+  
+
+</div>
+
+</div>
+<div  id="block-veoliasitecorelanguageblock" data-block-plugin-id="veolia_site_core_language_block" class="language-selector-block">
+  
+    
+      
+  </div>
+
+
+
+
+
+<div  data-block-plugin-id="veolia_site_region_switcher_block" class="container container--region-switcher-map container--width--wide region-switcher-wrapper">
+  <div class="region-switcher-wrapper__button">
+      <button class="region-switcher-button">
+  <svg class="region-switcher-button__icon">
+    <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#world-v2"></use>
+  </svg>
+  <span class="region-switcher-button__text region-switcher-button__text--desktop ">United States</span>
+  <span class="region-switcher-button__text region-switcher-button__text--mobile ">United States</span>
+</button>
+
+  </div>
+  <div class="region-switcher-wrapper__map">
+    <button class="region-switcher-wrappe__close"></button>
+      
+
+
+
+
+<div class="region-switcher ">
+  <div  data-block-plugin-id="veolia_site_region_switcher_block" class="container container--region-switcher-map container--width--wide">
+    <div class="container__inner">
+      <div class="region-switcher-list">
+                  <div class="region-switcher-list__group">
+            <div class="region-switcher-list__group-title">Veolia Group</div>
+                          <div class="region-switcher-list__group-items">
+                        <ul class="region-switcher-list__level">
+            <li>
+                  <a href="http://www.veolia.com/en" title="veolia.com">veolia.com</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.livingcircular.veolia.com/fr" title="Living circular">Living circular</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.fondation.veolia.com/en" title="Foundation">Foundation</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.institut.veolia.org/en" title="Institute">Institute</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.campus.veolia.com/en" title="Campus">Campus</a>
+        
+              </li>
+      </ul>
+
+              </div>
+                      </div>
+                  <div class="region-switcher-list__group">
+            <div class="region-switcher-list__group-title">In my area</div>
+                          <div class="region-switcher-list__group-items">
+                        <ul class="region-switcher-list__level">
+            <li data-has-children="true">
+                  <span tabindex="0">North America</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li>
+                  <a href="https://www.veolia.ca" title="Canada" data-codes="ca">Canada</a>
+        
+              </li>
+          <li>
+                  <a href="https://www.veolianorthamerica.com/en" title="United States" data-codes="us">United States</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li data-has-children="true">
+                  <span tabindex="0">Latin America</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li>
+                  <a href="http://www.veolia.com.ar" title="Argentina" data-codes="ar">Argentina</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.br" title="Brazil" data-codes="br">Brazil</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.cl" title="Chile" data-codes="cl">Chile</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.co/" title="Colombia" data-codes="co">Colombia</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.ec" title="Ecuador" data-codes="ec">Ecuador</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.mx" title="Mexico" data-codes="mx">Mexico</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.pe" title="Perú" data-codes="pe">Perú</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li data-has-children="true">
+                  <span tabindex="0">Africa - Middle-East</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li>
+                  <a href="http://www.veolia.com/africa" title="Africa" data-codes="za, dz, ao, bj, bw, bf, bi, cm, td, cg, cd, dj, eg, ma, gq, er, et, ga, gm, gh, gw, ke, ls, lr, ly, ci, mg, mw, ml, mr, mz, na, ne, ng, rw, sn, sl, so, ss, sd, sz, tz, tg, tn, ug, zm, zw, cf, gn">Africa</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.sa" title="Saudi Arabia" data-codes="sa">Saudi Arabia</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.seeg.ga" title="Gabon" data-codes="ga">Gabon</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.seeg.ne" title="Nigeria" data-codes="ne">Nigeria</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com/middleeast" title="Middle East" data-codes="ir, iq, kw, qa, ae, om, sa">Middle East</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li data-has-children="true">
+                  <span tabindex="0">Asia</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li data-has-children="true">
+                  <span tabindex="0">China</span>
+        
+                          <ul class="region-switcher-list__level--3">
+            <li>
+                  <a href="http://www.veolia.cn" title="China Mainland" data-codes="cn">China Mainland</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.hk" title="Hong-kong" data-codes="cn">Hong-kong</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li>
+                  <a href="http://www.veolia.co.kr" title="South Korea" data-codes="kr">South Korea</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.in" title="India" data-codes="in">India</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.jp" title="Japan" data-codes="jp">Japan</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.sg" title="Singapore" data-codes="sg">Singapore</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li data-has-children="true">
+                  <span tabindex="0">Europe</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li>
+                  <a href="http://www.veolia.de" title="Germany" data-codes="de">Germany</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.ua/en" title="Ukraine">Ukraine</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.be" title="Belgium" data-codes="be">Belgium</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.bg" title="Bulgaria" data-codes="bg">Bulgaria</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.dk" title="Denmark" data-codes="dk">Denmark</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.es" title="Spain" data-codes="es">Spain</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.ee" title="Estonia" data-codes="ee">Estonia</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.fr" title="France" data-codes="fr">France</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.nl" title="Netherlands" data-codes="nl">Netherlands</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.hu" title="Hungary" data-codes="hu">Hungary</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.ie" title="Ireland" data-codes="ie">Ireland</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.it" title="Italy" data-codes="it">Italy</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com/nordics/" title="Nordics" data-codes="no, fi, dk, se">Nordics</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.pl" title="Poland" data-codes="pl">Poland</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.com.pt" title="Portugal" data-codes="pt">Portugal</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.cz" title="Czech Republic" data-codes="cz">Czech Republic</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.co.uk" title="UK" data-codes="gb">UK</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.ro" title="Romania" data-codes="ro">Romania</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.ru" title="Russia" data-codes="ru">Russia</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.sk" title="Slovakia" data-codes="sk">Slovakia</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.veolia.se" title="Sweden" data-codes="se">Sweden</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li data-has-children="true">
+                  <span tabindex="0">Australia and New Zealand</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li>
+                  <a href="http://www.veolia.com/anz" title="Australia and New Zealand" data-codes="au, nz">Australia and New Zealand</a>
+        
+              </li>
+      </ul>
+
+              </li>
+      </ul>
+
+              </div>
+                      </div>
+                  <div class="region-switcher-list__group">
+            <div class="region-switcher-list__group-title">Specialty Brands</div>
+                          <div class="region-switcher-list__group-items">
+                        <ul class="region-switcher-list__level">
+            <li>
+                  <a href="https://airquality.veolia.com" title="Air Quality">Air Quality</a>
+        
+              </li>
+          <li>
+                  <a href="https://www.industries.veolia.com/en" title="Industries Global Solutions">Industries Global Solutions</a>
+        
+              </li>
+          <li>
+                  <a href="http://www.nuclearsolutions.veolia.com/en" title="Nuclear Solutions">Nuclear Solutions</a>
+        
+              </li>
+          <li>
+                  <a href="https://ofis.veolia.com/en" title="OFIS">OFIS</a>
+        
+              </li>
+          <li>
+                  <a href="https://www.sarpi.veolia.com/en" title="Sarpi">Sarpi</a>
+        
+              </li>
+          <li data-has-children="true">
+                  <span tabindex="0">SEDE</span>
+        
+                          <ul class="region-switcher-list__level--2">
+            <li>
+                  <a href="https://www.sede.veolia.com/" title="SEDE">SEDE</a>
+        
+              </li>
+          <li>
+                  <a href="https://www.sede.veolia.be/" title="SEDE Benelux">SEDE Benelux</a>
+        
+              </li>
+      </ul>
+
+              </li>
+          <li>
+                  <a href="https://seureca.veolia.com/en" title="Seureca">Seureca</a>
+        
+              </li>
+          <li>
+                  <a href="https://www.veoliawatertechnologies.com/" title="Water Technologies">Water Technologies</a>
+        
+              </li>
+      </ul>
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+
+      
+    <div  data-block-plugin-id="veolia_site_region_switcher_block" class="container container--region-switcher-map container--width--wide">
+      <div class="container__inner">
+        <div class="region-switcher-map-wrapper">
+          <div class="region-switcher-map">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+  </div>
+  <div class="top-header__hamburger">
+    <div class="top-header__hamburger-box">
+      <div class="top-header__hamburger-line"></div>
+    </div>
+  </div>
+</div>
+
+
+              </div>
+                      </div>
+        
+                  <div class="header__menu">
+            
+
+
+<nav  class="main-menu-wrap">
+  <div class="main-menu-wrap__content">
+    <div class="main-menu-wrap__menu">
+      
+<div id="block-mainnavigation" data-block-plugin-id="system_menu_block:main">
+  
+  
+  
+
+
+<div class="main-menu ">
+    
+  
+            <ul data-region="header" block="mainnavigation">
+                  <li>
+            <a class="main-menu__home-link" href="https://www.veolianorthamerica.com/" title="Home">
+              <svg class="main-menu__icon">
+                <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#icon-home"></use>
+              </svg>
+                              <img class="main-menu__icon main-menu__icon--sticky" src="/themes/custom/veo_site/build/assets/images/temp/logo-sticky.png" />
+                          </a>
+          </li>
+                                          <li  >
+        <a href="/what-we-do/water-capabilities" title="WATER" data-drupal-link-system-path="node/796">WATER</a>
+              </li>
+                              <li  >
+        <a href="/what-we-do/waste-capabilities" title="WASTE" data-drupal-link-system-path="node/806">WASTE</a>
+              </li>
+                              <li  class="header-menu-separator" >
+        <a href="/what-we-do/energy-capabilities" title="ENERGY" data-drupal-link-system-path="node/801">ENERGY</a>
+              </li>
+                              <li  >
+        <a href="/who-we-serve" title="MARKETS" data-drupal-link-system-path="node/811">MARKETS</a>
+              </li>
+                              <li  class="header-menu-separator" >
+        <a href="/case-studies" target="_self" title="CASE STUDIES" data-drupal-link-system-path="node/1641">CASE STUDIES</a>
+              </li>
+                              <li  >
+        <a href="/sustainability" title="SUSTAINABILITY" data-drupal-link-system-path="node/5961">SUSTAINABILITY</a>
+              </li>
+              <div class="main-menu__long-section">
+        <div class="main-menu__collapse-button"></div>
+        <div class="main-menu__long-section-items"></div>
+      </div>
+        </ul>
+  
+
+</div>
+
+
+</div>
+
+
+
+
+<div  class="views-exposed-form top-search top-search--variant--default" data-drupal-selector="views-exposed-form-search-page-1" id="block-search-page-1-exposedform" data-block-plugin-id="views_exposed_filter_block:search-page_1">
+  <button class="top-search-button">
+  <svg class="top-search-button__icon">
+    <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#search"></use>
+  </svg>
+</button>
+  <div class="top-search-popup">
+    <form  block="search_page_1_exposedform" action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8">
+  
+
+
+
+<div  class="js-form-item form-item js-form-type-textfield form-item-textfield form-item-keywords js-form-item-keywords form-no-label">
+  
+  <div class="ui-front">
+
+    
+    
+    
+
+  <input  placeholder="your search here" data-drupal-selector="edit-keywords" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" class="form-text" />
+
+
+
+    
+    
+    
+    
+  </div>
+
+  
+</div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+        
+
+
+  <div class="webform-submit-wrapper">
+    <input  data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="ok" class="button js-form-submit form-submit button--fill--default" />
+  </div>
+
+
+</div>
+
+
+</form>
+
+  </div>
+</div>
+<div class="header-buttons">
+      
+
+  
+  
+
+
+
+
+  <div  class="media-call-to-action media-call-to-action--theme--veo-vivid-red-light container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner"><a href="/cims-online-services">Access CIMS</a></div>
+  </div>
+
+
+      
+
+  
+  
+
+
+
+  
+  <div  class="media-call-to-action media-call-to-action--with-icon media-call-to-action--theme--veo-vivid-gray container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">    <svg>
+      <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#icon-letter"></use>
+    </svg>
+  <a href="/contact-us">Contact Us</a></div>
+  </div>
+
+
+  </div>
+
+
+
+    </div>
+  </div>
+  <div class="main-menu-wrap__background"></div>
+</nav>
+
+          </div>
+                
+                  <div class="header__mobile-menu">
+            <div class="header__mobile-menu-main"></div>
+            <div class="header__mobile-menu-additional"></div>
+          </div>
+              </header>
+    
+    <div class="content content--inner-page full-height">
+      <div class="content__inner">
+                                        <h1 class="sr-only">Veolia North America</h1>
+                  
+                    <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+
+<div  class="container container--homepage">
+  <div class="container__inner">
+    <div class="homepage-layout  ">
+      <div class="homepage-layout__region homepage-layout__region--top">
+                  <div class="block-region-left-top">
+
+
+<div data-block-plugin-id="entity_block:media">
+  
+  
+  
+      
+            
+
+<div class="container container--carousel-with-cta container--paragraph container--width--standard rs_preserve">
+  <div class="container__inner">
+    <section class="carousel-with-cta">
+            <button class="carousel-with-cta__button carousel-with-cta__button--prev">
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-with-cta__button carousel-with-cta__button--next">
+        <span class="sr-only">Next</span>
+      </button>
+      <div class="carousel-with-cta__container">
+                  
+  
+  
+
+
+
+
+<article  class="carousel-with-cta__item">
+  <div class="container">
+    <div class="container__inner">
+      <div class="carousel-with-cta-item rs_preserve  ">
+                  <div class="carousel-with-cta-item__media">
+            <div>
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/carousel/public/image/2023/08/sustainability%20readiness%20study%20homepage%20slider.jpg?itok=eF0H658U" width="960" height="546" alt="Are U.S. Companies on Course to Meet Their Sustainability Commitments?" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</div>
+      </div>
+                                          <div class="carousel-with-cta-item__content">
+            <div class="carousel-with-cta-item__content-container">
+                              <h3 class="carousel-with-cta-item__title">Are U.S. Companies on Course to Meet Their Sustainability Commitments?</h3>
+                                            <div class="carousel-with-cta__subtitle">
+            <div><p>Insights from Veolia&#039;s latest research</p>
+</div>
+      </div>
+                          </div>
+                          <div class="carousel-with-cta__link">
+                  
+
+
+
+  <div  class="media-call-to-action media-call-to-action--align--center container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">
+            <div><a href="https://www.veolianorthamerica.com/netzeroreadiness">See the Results</a></div>
+      </div>
+  </div>
+
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</article>
+
+                  
+  
+
+
+
+
+
+<article  class="carousel-with-cta__item">
+  <div class="container">
+    <div class="container__inner">
+      <div class="carousel-with-cta-item rs_preserve  ">
+                  <div class="carousel-with-cta-item__media">
+            <div>
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/carousel/public/image/2023/06/Veolia%20Academy%20homepage%20slider.jpg?itok=tjT_NTNj" width="960" height="546" alt="Veolia Academy example - two Veolia water operators work together at a facility" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</div>
+      </div>
+                                          <div class="carousel-with-cta-item__content">
+            <div class="carousel-with-cta-item__content-container">
+                              <h3 class="carousel-with-cta-item__title">Veolia Academy Launches Free Online Training Program For Well-Paying Water Jobs</h3>
+                                        </div>
+                          <div class="carousel-with-cta__link">
+                  
+
+
+
+  <div  class="media-call-to-action media-call-to-action--align--center container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">
+            <div><a href="/media/press-releases/veolia-academy-launches-free-online-training-program">Read The Announcement</a></div>
+      </div>
+  </div>
+
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</article>
+
+                  
+  
+  
+
+
+
+
+<article  class="carousel-with-cta__item">
+  <div class="container">
+    <div class="container__inner">
+      <div class="carousel-with-cta-item rs_preserve  ">
+                  <div class="carousel-with-cta-item__media">
+            <div>
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/carousel/public/image/2023/08/water%20testing%20lab%20employee%20-%20homepage%20slider.jpg?itok=ejDN9YJd" width="960" height="546" alt="A Veolia employee in a laboratory tests water" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</div>
+      </div>
+                                          <div class="carousel-with-cta-item__content">
+            <div class="carousel-with-cta-item__content-container">
+                              <h3 class="carousel-with-cta-item__title">Solving the Water Workforce Crisis</h3>
+                                            <div class="carousel-with-cta__subtitle">
+            <div><p>Innovative solutions for the decline in the municipal water sector</p>
+</div>
+      </div>
+                          </div>
+                          <div class="carousel-with-cta__link">
+                  
+
+
+
+  <div  class="media-call-to-action media-call-to-action--align--center container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">
+            <div><a href="https://blog.veolianorthamerica.com/solving-the-water-workforce-crisis-innovative-solutions-for-the-decline-in-the-municipal-water-sector">Learn More</a></div>
+      </div>
+  </div>
+
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</article>
+
+                  
+  
+
+
+
+
+
+<article  class="carousel-with-cta__item">
+  <div class="container">
+    <div class="container__inner">
+      <div class="carousel-with-cta-item rs_preserve  ">
+                  <div class="carousel-with-cta-item__media">
+            <div>
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/carousel/public/image/2023/06/homepage_slider.jpg?itok=L2eFUX6c" width="960" height="546" alt="2023 Award Intel EPIC Distinguished Supplier" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</div>
+      </div>
+                                          <div class="carousel-with-cta-item__content">
+            <div class="carousel-with-cta-item__content-container">
+                              <h3 class="carousel-with-cta-item__title">Veolia North America Earns Intel’s 2023 EPIC Distinguished Supplier Award</h3>
+                                        </div>
+                          <div class="carousel-with-cta__link">
+                  
+
+
+
+  <div  class="media-call-to-action media-call-to-action--align--center container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">
+            <div><a href="https://www.veolianorthamerica.com/media/press-releases/veolia-north-america-earns-intels-2023-epic-distinguished-supplier-award">Read the announcement</a></div>
+      </div>
+  </div>
+
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</article>
+
+                  
+  
+  
+
+
+
+
+<article  class="carousel-with-cta__item">
+  <div class="container">
+    <div class="container__inner">
+      <div class="carousel-with-cta-item rs_preserve  ">
+                  <div class="carousel-with-cta-item__media">
+            <div>
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/carousel/public/image/2023/03/Technomap%20homepage%20slider.jpg?itok=jEjiQltF" width="960" height="546" alt="" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</div>
+      </div>
+                                          <div class="carousel-with-cta-item__content">
+            <div class="carousel-with-cta-item__content-container">
+                              <h3 class="carousel-with-cta-item__title">Explore our interactive map </h3>
+                                            <div class="carousel-with-cta__subtitle">
+            <div><p>Sustainable solutions for municipalities and industries</p>
+</div>
+      </div>
+                          </div>
+                          <div class="carousel-with-cta__link">
+                  
+
+
+
+  <div  class="media-call-to-action media-call-to-action--align--center container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">
+            <div><a href="https://activities.veolianorthamerica.com/en/25">Explore</a></div>
+      </div>
+  </div>
+
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</article>
+
+                  
+  
+  
+
+
+
+
+<article  class="carousel-with-cta__item">
+  <div class="container">
+    <div class="container__inner">
+      <div class="carousel-with-cta-item rs_preserve  ">
+                  <div class="carousel-with-cta-item__media">
+            <div>
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/carousel/public/image/2023/01/bet_homepage_slider.jpg?itok=lWj-lGN7" width="960" height="546" alt="" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</div>
+      </div>
+                                          <div class="carousel-with-cta-item__content">
+            <div class="carousel-with-cta-item__content-container">
+                              <h3 class="carousel-with-cta-item__title">More Than Half of Americans Deeply Concerned About Climate Change</h3>
+                                            <div class="carousel-with-cta__subtitle">
+            <div><p>U.S. Data Is First-of- Its-Kind Study Commissioned by Veolia to Measure World Climate Sentiments</p>
+</div>
+      </div>
+                          </div>
+                          <div class="carousel-with-cta__link">
+                  
+
+
+
+  <div  class="media-call-to-action media-call-to-action--align--center container container--media-call-to-action container--media-entity">
+    <div class="media-call-to-action__inner">
+            <div><a href="https://www.veolianorthamerica.com/barometer-ecological-transformation" target="_self">See the Results</a></div>
+      </div>
+  </div>
+
+
+              </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+</article>
+
+              </div>
+      <div class="carousel-with-cta__nav">
+        <div class="carousel-with-cta__dots-container"></div>
+              </div>
+    </section>
+  </div>
+</div>
+
+  </div>
+</div>
+                <div class="block-region-right-top">
+
+
+<div data-block-plugin-id="entity_block:media">
+  
+  
+  
+      
+<div  class="container container--media-entity container--media-iframe">
+  <div class="container__inner">
+    <div class="media-iframe">
+            <div class="media-iframe__content">
+        
+            <div><style>
+.auto-hyphenation *, .auto-hyphenation ::after, .auto-hyphenation ::before {overflow-wrap: auto;word-wrap: auto;-webkit-hyphens:none;-ms-hyphens: none;hyphens: none !important;}
+*, ::after, ::before {-webkit-hyphens: none;-ms-hyphens: none;hyphens: none;}
+.container--space-outer--v-s--top {margin-top:10px}
+h2 {display:none}
+a.call-out {width:150px;display:inline-block;padding:12px 20px;color:#222;text-decoration:none;text-transform:uppercase;font-style:normal;margin-top:5px;font-size:14px;font-weight:600;background-color:#fff;border:1px solid #fff;-webkit-transition: all 0.4s ease 0s; -moz-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s;font-family:TheSans-OT,Arial,FreeSans,Garuda,Helvetica,Bitstream Vera Sans,sans-serif,serif;}
+a.call-out:hover {background-color:#222;color:#fff;border:1px solid #222;}
+</style>
+<div style="min-height:310px;padding:20px 15px 15px;display:block;border-top-left-radius:20PX;border-bottom-right-radius:20px;background-color:#222222;background-image:url(/sites/g/files/dvc1836/files/styles/crop_freeform/public/image/2022/05/residential_water_HP_callout.jpg);background-repeat: no-repeat;background-position: top left;background-size:cover;color:#fff;hyphens:none;text-align:center;margin-top:10px;;"><img src="/sites/g/files/dvc1836/files/styles/crop_freeform/public/image/2022/05/water_ico%402x.png" alt="" class="" style=""/><h3 style="font-size:22px;font-style:italic;text-transform: uppercase;margin:10px 0 0;">Are you a residential water customer?</h3><p style="font-size:18px;font-weight:300;margin:10px 0 10px;">For questions about your water service or billing, please visit our water customer portal.</p><a href="https://mywater.veolia.us/" class="call-out" id="" target="_blank">my water</a></div></div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+
+<div data-block-plugin-id="entity_block:media">
+  
+  
+  
+      
+<div  class="container container--media-entity container--media-iframe">
+  <div class="container__inner">
+    <div class="media-iframe">
+            <div class="media-iframe__content">
+        
+            <div><style>
+.container--space-outer--v-s--top {margin-top:10px}
+h2 {display:none}
+a.call-out2 {width:150px;display:inline-block;padding:12px 20px;color:#fff;text-decoration:none;text-transform:uppercase;font-style:normal;margin-top:15px;font-size:14px;font-weight:600;background-color:#ff9f16;border:none;-webkit-transition: all 0.4s ease 0s; -moz-transition: all 0.4s ease 0s; -ms-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s;font-family:TheSans-OT,Arial,FreeSans,Garuda,Helvetica,Bitstream Vera Sans,sans-serif,serif;}
+a.call-out2:hover {background-color:#fbaf42;color:#fff;border:none}
+</style>
+<div style="min-height:198px;padding:20px 20px 15px;display:block;border-top-left-radius:20PX;border-bottom-right-radius:20px;background-color:#aa9f94;background-image:url(/sites/g/files/dvc1836/files/styles/crop_freeform/public/image/2022/06/pfas_callout_bg_0.jpg);background-repeat: no-repeat;background-position: top left;background-size:cover;color:#fff;hyphens:none;text-align:center;margin-top:10px;"><h3 style="font-size:22px;font-style:italic;text-transform: uppercase;margin:10px 0 0;">PFAS Management</h3><p style="font-size:18px;font-weight:300;margin:10px 0 10px;">Our Complete A to Z Solution.</p><a href="/pfas-management" class="call-out2">Learn More</a></div></div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>      </div>
+      <div class="homepage-layout__region homepage-layout__region--bottom">
+                  <div class="block-region-left-bottom">
+
+
+<div data-block-plugin-id="entity_field:node:field_paragraphs">
+  
+  
+  
+      
+      <div>
+              <div>
+
+      
+
+
+
+<div  class="container container--space-inner--v-m container--column container--grid container--paragraph container--width--standard">
+  <div class="container__inner">
+    <div class="grid grid--count--3 ">
+                    <div class="grid__column">
+          
+
+<div  class="container container--space-inner--v-m container--paragraph container--media container--width--standard">
+  <div class="container__inner">
+    <div class="media">
+      
+            <div>
+
+          
+        
+                        
+              
+              
+    
+  
+        
+  
+        
+  <div  class="content-push content-push-v2 content-push--theme--veo-vivid-gray-dark container container--content-push container--media-entity readspeaker-content content-push--mobile-version">
+  <div class="container__inner">
+    <div class="content-push__wrap">
+              <div class="content-push__image">
+                  <a href="/what-we-do/water-capabilities" target="_self" title="Water">
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/content_push_teaser/public/image/2018/10/HP_water.jpg?itok=I5CEw-Bp" width="300" height="230" alt="" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</a>
+      
+        </div>
+            <div class="content-push__content">
+        <div class="content-push__bottom">
+          <div class="content-push__bottom">
+            <div>
+                              <div class="content-push__date">
+                  <span class="content-push__context-title-text"></span>
+                </div>
+                            
+                            <div class="content-push__title">
+                      <a href="/what-we-do/water-capabilities" target="_self" title="Water">Water</a>
+    
+              </div>
+                              <div class="content-push__description">
+                  We treat and monitor water quality at each stage in its cycle from production and distribution of drinking water to the collection, treatment and recycling of wastewater.
+                </div>
+                          </div>
+            <div>
+                          </div>
+            <div class="content-push__context-svg-icon-container content-push__context-svg-icon-container--left-part">
+              <svg class="content-push__context-svg-icon">
+                <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#low-tech-down-arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-push__cta-link">
+          <a href="/what-we-do/water-capabilities" target="_self">Learn more</a>
+      </div>
+</div>
+</div>
+      
+    </div>
+  </div>
+</div>
+
+        </div>
+              <div class="grid__column">
+          
+
+<div  class="container container--space-inner--v-m container--paragraph container--media container--width--standard">
+  <div class="container__inner">
+    <div class="media">
+      
+            <div>
+
+          
+        
+                        
+              
+              
+    
+  
+        
+  
+        
+  <div  class="content-push content-push-v2 content-push--theme--veo-vivid-gray-dark container container--content-push container--media-entity readspeaker-content content-push--mobile-version">
+  <div class="container__inner">
+    <div class="content-push__wrap">
+              <div class="content-push__image">
+                  <a href="/what-we-do/waste-capabilities" target="_self" title="Waste">
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/content_push_teaser/public/image/2018/10/HP_waste.jpg?itok=dxvtsB1O" width="300" height="230" alt="" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</a>
+      
+        </div>
+            <div class="content-push__content">
+        <div class="content-push__bottom">
+          <div class="content-push__bottom">
+            <div>
+                              <div class="content-push__date">
+                  <span class="content-push__context-title-text"></span>
+                </div>
+                            
+                            <div class="content-push__title">
+                      <a href="/what-we-do/waste-capabilities" target="_self" title="Waste">Waste</a>
+    
+              </div>
+                              <div class="content-push__description">
+                  We specialize in non-hazardous and hazardous waste management, from collection to recycling, leading to the ﬁnal recovery of waste as materials or energy.
+                </div>
+                          </div>
+            <div>
+                          </div>
+            <div class="content-push__context-svg-icon-container content-push__context-svg-icon-container--left-part">
+              <svg class="content-push__context-svg-icon">
+                <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#low-tech-down-arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-push__cta-link">
+          <a href="/what-we-do/waste-capabilities" target="_self">Learn more</a>
+      </div>
+</div>
+</div>
+      
+    </div>
+  </div>
+</div>
+
+        </div>
+              <div class="grid__column">
+          
+
+<div  class="container container--space-inner--v-m container--paragraph container--media container--width--standard">
+  <div class="container__inner">
+    <div class="media">
+      
+            <div>
+
+          
+        
+                        
+              
+              
+    
+  
+        
+  
+        
+  <div  class="content-push content-push-v2 content-push--theme--veo-vivid-gray-dark container container--content-push container--media-entity readspeaker-content content-push--mobile-version">
+  <div class="container__inner">
+    <div class="content-push__wrap">
+              <div class="content-push__image">
+                  <a href="/what-we-do/energy-capabilities" target="_self" title="Energy">
+
+
+<div class="container container--media-entity container--media-image rs_preserve  container--width--full   ">
+  <div class="container__inner">
+    <figure class="media-image">
+            <picture class="media-image__picture">
+                        
+        <img src="/sites/g/files/dvc1836/files/styles/content_push_teaser/public/image/2018/10/HP_energy.jpg?itok=7QoIPtAI" width="300" height="230" alt="" loading="lazy" typeof="foaf:Image" />
+
+
+
+  
+      </picture>
+                </figure>
+  </div>
+</div>
+</a>
+      
+        </div>
+            <div class="content-push__content">
+        <div class="content-push__bottom">
+          <div class="content-push__bottom">
+            <div>
+                              <div class="content-push__date">
+                  <span class="content-push__context-title-text"></span>
+                </div>
+                            
+                            <div class="content-push__title">
+                      <a href="/what-we-do/energy-capabilities" target="_self" title="Energy">Energy</a>
+    
+              </div>
+                              <div class="content-push__description">
+                  We are leading experts in sustainable energy solutions, supporting the economic growth of municipal, commercial and industry clients, while also reducing their carbon footprint.
+                </div>
+                          </div>
+            <div>
+                          </div>
+            <div class="content-push__context-svg-icon-container content-push__context-svg-icon-container--left-part">
+              <svg class="content-push__context-svg-icon">
+                <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#low-tech-down-arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-push__cta-link">
+          <a href="/what-we-do/energy-capabilities" target="_self">Learn more</a>
+      </div>
+</div>
+</div>
+      
+    </div>
+  </div>
+</div>
+
+        </div>
+          </div>
+  </div>
+</div>
+</div>
+          </div>
+  
+  </div>
+</div>
+                          <div class="block-region-right-bottom">
+<div  data-block-plugin-id="social_media_links_block" class="block-social-media-links block block-social-media-links-block container container--paragraph container--social-media-block">
+  <div class="container__inner">
+    <section class="social-media-block">
+      
+              <h2  class="social-media-block__title"></h2>
+            
+      <div class="social-media-block__content">
+        
+<ul  class="social-media">
+      <li class="social-media__item twitter">
+               <a href="https://www.twitter.com/Veolia_NA"  aria-label="Follow our Twitter account" title="Follow our Twitter account" target="_blank" >
+              <span class='fab fa-twitter fa-2x'></span>
+                  <span class="name">Twitter</span>
+              </a>
+
+          </li>
+      <li class="social-media__item linkedin">
+               <a href="https://www.linkedin.com/company/veolianorthamerica/"  aria-label="Follow us on LinkedIn" title="Follow us on LinkedIn" target="_blank" >
+              <span class='fab fa-linkedin fa-2x'></span>
+                  <span class="name">LinkedIn</span>
+              </a>
+
+          </li>
+      <li class="social-media__item facebook">
+               <a href="https://www.facebook.com/veolianorthamerica"  aria-label="Follow our Facebook page" title="Follow our Facebook page" target="_blank" >
+              <span class='fab fa-facebook fa-2x'></span>
+                  <span class="name">Facebook</span>
+              </a>
+
+          </li>
+      <li class="social-media__item youtube">
+               <a href="https://www.youtube.com/user/veolianorthamerica"  aria-label="Follow our Youtube page" title="Follow our Youtube page" target="_blank" >
+              <span class='fab fa-youtube fa-2x'></span>
+                  <span class="name">Youtube</span>
+              </a>
+
+          </li>
+      <li class="social-media__item rss">
+               <a href="/rss-site-updates"  aria-label="Subscribe to our RSS feed" title="Subscribe to our RSS feed" target="_blank" >
+              <span class='fa fa-rss fa-2x'></span>
+                  <span class="name">RSS</span>
+              </a>
+
+          </li>
+  </ul>
+
+      </div>
+    </section>
+  </div>
+</div>
+
+<div  data-block-plugin-id="veolia_site_core_twitter_block" class="block block-veolia-site-core block-veolia-site-core-twitter-block container container--paragraph container--social-timeline-widget container--width--standard rs_preserve">
+  <div >
+    <div class="container__inner">
+      <div class="social-timeline-widget social-timeline-widget--twitter">
+                  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <div class="twitter-timeline-container" data-height="1300" data-href="https://twitter.com/Veolia_NA" data-title="Tweets by @Veolia_NA"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+                      </div>
+    </div>
+
+          
+
+    
+          
+
+<footer  class="footer">
+  <div class="footer__inner">
+      
+<div id="block-footer" data-block-plugin-id="system_menu_block:footer">
+  
+  
+  
+
+
+<div class="footer-menu">
+  
+  
+  
+            <ul block="footer">
+                          <li  >
+                      <a href="/veolia-sitemap" target="_self" data-drupal-link-system-path="node/4821">Site Map</a>
+                            </li>
+                      <li  >
+                      <a href="/privacy-notice" data-drupal-link-system-path="node/761">Privacy Notice</a>
+                            </li>
+                      <li  >
+                      <a href="/legal-notice" data-drupal-link-system-path="node/16">Legal Notice</a>
+                            </li>
+                      <li  >
+                      <a href="/culture-safety" target="_self">Culture of Safety</a>
+                            </li>
+                      <li  >
+                      <a href="/find-office" target="_self">Find an Office</a>
+                            </li>
+          </ul>
+  
+
+</div>
+</div>
+
+<div class="footer-copyright">
+  <div class="footer-copyright__content">
+    
+    
+    © 2023 Veolia
+  </div>
+</div>
+
+
+
+<div id="block-conditional-code-block-36" data-block-plugin-id="block_content:8c1bd466-2239-405d-adb6-768b1d5b7ad2">
+  
+  
+  
+      
+            <div><!-- Hotjar Tracking Code for www.veolianorthamerica.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1011980,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script></div>
+      
+  </div>
+
+
+
+<div id="block-conditional-code-block-31" data-block-plugin-id="block_content:885515b1-3822-45e1-9009-f91764926cf6">
+  
+  
+  
+      
+            <div><!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3393415.js"></script>
+<!-- End of HubSpot Embed Code --></div>
+      
+  </div>
+
+
+
+<div id="block-conditional-code-block-56" data-block-plugin-id="block_content:8f7eed90-cfb0-4a1a-969e-007541123e72">
+  
+  
+  
+      
+            <div><!-- WEBSIGHTS -->
+<noscript>
+<img src="https://ws.zoominfo.com/pixel/xLNoCwBZCSXvrF2fCRMd"
+width="1" height="1" style="display: none;" />
+</noscript></div>
+      
+  </div>
+
+
+
+<div id="block-conditional-code-block-41" data-block-plugin-id="block_content:1976a8b5-8ae5-43fa-83ac-5568281c51ea">
+  
+  
+  
+      
+            <div><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFQXVQM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --></div>
+      
+  </div>
+
+  </div>
+</footer>
+
+      </div>
+</div>
+<button class="button-to-top">
+  <span class="sr-only">Top</span>
+  <svg class="button-to-top__icon">
+    <use xlink:href="/themes/custom/veo_site/build/assets/sprite-svg/sprite.svg?v=s0ltpr#top-arrow"></use>
+  </svg>
+</button>
+
+  </div>
+
+    
+    <script src="//static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/g/files/dvc1836/files/js/js_KYQpHetZuvjkmHwsa936w3S84lgP16mbN65DNAp6ZXk.js"></script>
+<script src="/themes/custom/veo_site/build/assets/scripts/sub_themes/hv2/header.js?s0ltpr"></script>
+<script src="/themes/custom/veo_site/build/assets/scripts/sub_themes/v2/app.js?s0ltpr"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-29eea644ab3b93e98cc","applicationID":"400800966","transactionName":"ZQNQZ0BQC0AFUkUKDlxJc1BGWApdS3VDFhFTCm5dXVUAbydeXxcTXQpeVkBtK1wAVGcKBEUlXV1GQwpfCFRDTl9ED1dE","queueTime":3,"applicationTime":705,"atts":"SURTEQhKGE4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
