@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zach Morrissey — Product Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d10;--panel:#12151a;--muted:#98a2b3;--text:#e9eef6;--brand:#5eead4;--chip:#17202a;--link:#93c5fd;--shadow:0 10px 30px rgba(0,0,0,.35)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+
+/* WIDER PAGE */
+.wrap{max-width:1280px;margin:0 auto;padding:24px}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--brand);box-shadow:0 0 24px var(--brand)}
+nav a{margin-left:16px;color:var(--link);text-decoration:none;font-weight:600}
+.hero{margin:28px 0;padding:28px;border-radius:18px;background:linear-gradient(180deg,rgba(94,234,212,.06),rgba(134,239,172,.04)),var(--panel);box-shadow:var(--shadow)}
+.hero h1{margin:0 0 6px;font-size:clamp(28px,4vw,46px)}
+.hero p{margin:0;color:var(--muted);max-width:72ch}
+.chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#0f1318;border:1px solid rgba(255,255,255,.08);color:#d5e1f5;padding:8px 12px;border-radius:999px;font-weight:700}
+.cta{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0f1318;color:var(--text);font-weight:700;text-decoration:none}
+.btn.primary{background:linear-gradient(180deg,rgba(94,234,212,.2),rgba(94,234,212,.05));border-color:rgba(94,234,212,.35)}
+
+/* LARGER CARDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:22px}
+.card{background:#0e1217;border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s ease, border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:rgba(94,234,212,.45)}
+
+/* FEATURED + WIDE */
+.card.featured{border-color:rgba(94,234,212,.65);box-shadow:0 0 0 2px rgba(94,234,212,.25), var(--shadow)}
+@media (min-width:980px){
+  .card.wide{grid-column:span 2}
+  .card.wide .shot{aspect-ratio:3/2}
+}
+
+/* IMAGE AREA */
+.shot{position:relative;aspect-ratio:16/9;background:#0b0d10;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center}
+.badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(180deg,rgba(94,234,212,.9),rgba(94,234,212,.6));color:#0a0f14;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px;letter-spacing:.02em;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+/* Make screenshots fill the frame cleanly */
+.shot img{width:100%;height:100%;object-fit:contain}
+
+.body{padding:14px 14px 16px}
+.title-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.title{font-weight:800;flex:1}
+.subtitle{color:var(--muted);font-size:14px;margin:6px 0 8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;background:#121720;border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px}
+.outcome{margin-top:8px;font-weight:700}
+footer{margin:40px 0 16px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><span class="dot"></span> Zach Morrissey</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="#work">Work</a>
+        <a href="mailto:zachmorrissey@gmail.com">Email</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <h1>Product portfolio — Platforms, data, and integrations</h1>
+      <p>I operate at the PM-Platform / TPM intersection: API platforms, integration tooling, data visibility, explainability, and reliability. Skimmable on top, deep receipts inside.</p>
+      <div class="chips">
+        <div class="chip">0 → 1.6B monthly events</div>
+        <div class="chip">260+ API customers</div>
+        <div class="chip">Churn 25% → 0% (target segment)</div>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#work">See case studies</a>
+        <a class="btn" href="/Zach_Morrissey_Resume.pdf">Download resume</a>
+      </div>
+    </section>
+
+    <section id="work" class="grid">
+      <!-- CARD 1: All Records (featured & wide) -->
+      <article class="card featured wide">
+        <a href="/portfolio/all-records/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+            <img src="img/all-records-hero.png" alt="All Records table screenshot"/>
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <div class="title">All Records — data visibility</div>
+              <span class="badge">Most impactful</span>
+            </div>
+            <div class="subtitle">Make product data discoverable and trustworthy: which entities exist, when updated, and what automation touched a record.</div>
+            <div class="outcome">Result: Self-serve troubleshooting, fewer “data stale” tickets, foundation for Profile/Timeline/Debuggers.</div>
+            <div class="tags"><span class="tag">Data Visibility</span><span class="tag">Self-Serve</span><span class="tag">Diagnostics</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 2: Observability & Reliability Suite -->
+      <article class="card">
+        <a href="/portfolio/observability-reliability/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/observability-suite.png" alt="Dashboards and audits collage" />
+          </div>
+          <div class="body">
+            <div class="title">Observability & Reliability Suite</div>
+            <div class="subtitle">Writeback Audit, Anomaly Audit, weekly ritual, Grafana + latency dashboards, and incident alerts (Opsgenie).</div>
+            <div class="outcome">Result: Drift detection, early warning, and tighter MTTR for partners and internal stakeholders.</div>
+            <div class="tags"><span class="tag">Reliability</span><span class="tag">Observability</span><span class="tag">Alerts</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 3: Data Integrations — Credentials -->
+      <article class="card">
+        <a href="/portfolio/data-integrations-credentials/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/credentials-verifier.png" alt="Credentials verifier UI" />
+          </div>
+          <div class="body">
+            <div class="title">Data Integrations — Credentials</div>
+            <div class="subtitle">Secure credential capture, validation, and timeline activity; rollout to 60+ integrations.</div>
+            <div class="outcome">Result: Faster time-to-first-sync, fewer back-and-forths, no secrets over email.</div>
+            <div class="tags"><span class="tag">Onboarding</span><span class="tag">Security</span><span class="tag">Automation</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 4: Variables Page -->
+      <article class="card">
+        <a href="/portfolio/variables-page/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/variables-page.png" alt="Variables catalog screenshot" />
+          </div>
+          <div class="body">
+            <div class="title">Variables Page</div>
+            <div class="subtitle">Catalog of merge variables with search, previews, and usage guidance for campaigns and automation.</div>
+            <div class="outcome">Result: Fewer template bugs; quicker campaign creation.</div>
+            <div class="tags"><span class="tag">Content Ops</span><span class="tag">DX</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 5: Developer Portal -->
+      <article class="card">
+        <a href="/portfolio/developer-portal/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/developer-portal.png" alt="developer.sensehq.com" />
+          </div>
+          <div class="body">
+            <div class="title">Developer.sensehq.com</div>
+            <div class="subtitle">API docs and samples treated as a product: schemas, writeback guides, webhooks, and quickstarts.</div>
+            <div class="outcome">Result: Lower time-to-integration, higher partner autonomy.</div>
+            <div class="tags"><span class="tag">APIs</span><span class="tag">Docs</span><span class="tag">DX</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 6: CRM -->
+      <article class="card">
+        <a href="/portfolio/crm/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/crm.png" alt="CRM initiatives"  />
+          </div>
+          <div class="body">
+            <div class="title">CRM</div>
+            <div class="subtitle">Core CRM improvements that amplify GTM workflows and data quality.</div>
+            <div class="outcome">Result: Cleaner pipelines and better lifecycle automation.</div>
+            <div class="tags"><span class="tag">GTM</span><span class="tag">Data</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 7: Customer ROI Dashboards -->
+      <article class="card">
+        <a href="/portfolio/customer-roi-dashboards/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/roi-dashboards.png" alt="ROI dashboard"  />
+          </div>
+          <div class="body">
+            <div class="title">Customer ROI Dashboards</div>
+            <div class="subtitle">Executive-friendly outcomes: adoption, conversion, and value surfaced clearly.</div>
+            <div class="outcome">Result: Stronger renewals, credible business reviews.</div>
+            <div class="tags"><span class="tag">Analytics</span><span class="tag">Executive Readouts</span></div>
+          </div>
+        </a>
+      </article>
+
+      <!-- CARD 8: Salesforce Technical Docs (example) -->
+      <article class="card">
+        <a href="/portfolio/salesforce-tech-docs/" style="text-decoration:none;color:inherit">
+          <div class="shot">
+             <img src="img/salesforce-docs.png" alt="Salesforce tech doc" />
+          </div>
+          <div class="body">
+            <div class="title">Example Technical Documentation — Salesforce</div>
+            <div class="subtitle">Clear integration steps, field mappings, error handling, and test plans.</div>
+            <div class="outcome">Result: Fewer escalations; faster, safer launches.</div>
+            <div class="tags"><span class="tag">Technical Writing</span><span class="tag">Integrations</span></div>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <footer>© <span id="year"></span> Zach Morrissey • <a href="mailto:zachmorrissey@gmail.com" style="color:#9ac5ff">Contact</a></footer>
+  </div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
