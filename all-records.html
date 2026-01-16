@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>All Records — EMS data visibility & explainability</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d10; --panel:#12151a; --muted:#98a2b3; --text:#e9eef6;
+  --brand:#5eead4; --accent:#93c5fd; --ok:#34d399; --warn:#fbbf24;
+  --border:rgba(255,255,255,.08); --shadow:0 10px 30px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{display:flex;align-items:center;justify-content:space-between}
+header a{color:var(--accent);text-decoration:none;font-weight:700}
+.hero{margin:18px 0 16px;padding:22px;border-radius:16px;background:linear-gradient(180deg,rgba(94,234,212,.06),rgba(134,239,172,.04)),var(--panel);box-shadow:var(--shadow)}
+h1{margin:0 0 8px;font-size:clamp(26px,4.2vw,44px)}
+.sub{margin:0;color:var(--muted);max-width:70ch}
+.chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#10141a;border:1px solid var(--border);padding:8px 12px;border-radius:999px;font-weight:800}
+.grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
+.card{background:#0e1217;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.card h3{margin:0;padding:14px 16px;border-bottom:1px solid var(--border)}
+.card .body{padding:14px 16px;color:#dbe7fb}
+.kv{display:grid;grid-template-columns:1fr;gap:12px}
+.kv > div{background:#0f1318;border:1px solid var(--border);border-radius:12px;padding:12px}
+.kv .t{font-weight:700}
+img.shot{display:block;width:100%;height:auto;background:#0b0d10}
+.gallery{display:grid;grid-template-columns:1fr;gap:14px}
+.caption{color:var(--muted);font-size:13px;margin-top:6px}
+.figure{background:#0f1318;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.figure .pad{padding:12px}
+.badge{display:inline-block;margin-right:8px;border-radius:999px;padding:6px 10px;background:rgba(94,234,212,.15);border:1px solid rgba(94,234,212,.35);font-weight:800}
+blockquote{margin:12px 0;padding:10px 12px;border-left:3px solid var(--brand);background:#0f1318;color:#d9e6ff;border-radius:6px}
+.small{font-size:13px;color:var(--muted)}
+footer{margin:30px 0 16px;color:var(--muted);text-align:center}
+@media(min-width:900px){
+  .grid{grid-template-columns:2fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="/portfolio/">← Back to portfolio</a>
+    <a href="mailto:zachmorrissey@gmail.com">Contact</a>
+  </header>
+
+  <section class="hero">
+    <h1>All Records — EMS data visibility & explainability</h1>
+    <p class="sub">0→1 platform surface that makes product data discoverable, trustworthy, and explainable:
+      what exists, when it changed, and what automation acted—so anyone can self-serve root cause.</p>
+    <div class="chips">
+      <div class="chip">63% drop in weekly open data tickets (73 → 27)</div>
+      <div class="chip">#2 most-viewed interface</div>
+      <div class="chip">~80% of primary app’s traffic</div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <!-- LEFT COLUMN -->
+    <article class="card">
+      <h3>Problem → Insight</h3>
+      <div class="body">
+        <p>“Silent failures” and data opacity caused avoidable escalations and churn risk. Users couldn’t easily see
+          which entities were available, when they were last updated, or <em>why</em> an automation did or didn’t fire.
+          Common support work involved ad-hoc SQL queries just to verify freshness and source-of-truth.</p>
+        <ul>
+          <li>List & search across EMS entities, not just people records.</li>
+          <li>Show <strong>Date Added</strong> / <strong>Date Updated</strong> and provenance at a glance.</li>
+          <li>Join to timelines & audits for one-click “why.”</li>
+        </ul>
+        <span class="badge">My role</span> PM (Platform) — product strategy, requirements, design partnering, delivery, and org alignment.
+      </div>
+    </article>
+
+    <!-- RIGHT COLUMN (OUTCOMES) -->
+    <aside class="card">
+      <h3>Outcomes</h3>
+      <div class="body">
+        <div class="kv">
+          <div>
+            <div class="t">Ticket reduction</div>
+            <div class="small">Open data tickets dropped from a peak of 73 to 27 after launch (≈63% ↓). Many issues now resolve via self-serve.</div>
+          </div>
+          <div>
+            <div class="t">Adoption</div>
+            <div class="small">~80% of the primary app’s traffic; <strong>#2 most-viewed interface</strong> across customers and internal teams.</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- LEFT: HOW IT WORKS -->
+    <article class="card">
+      <h3>What I built</h3>
+      <div class="body">
+        <ul>
+          <li><strong>Catalog</strong> — all EMS entities with search (IDs & names), sortable freshness (Date Added/Updated).</li>
+          <li><strong>Profile</strong> — per-record detail (Sense Data), associated entities, and subscriptions.</li>
+          <li><strong>Timeline/Activity</strong> — explainability: what automation touched a record and when.</li>
+          <li><strong>Link-outs</strong> — debugger paths for deeper root-cause (optional; separate tool).</li>
+          <li><strong>Guardrails</strong> — design iterations (hide nulls, clearer scopes, nav moves).</li>
+        </ul>
+        <blockquote>From “black box” to <strong>explainable data</strong>: see it, trust it, act—without a ticket.</blockquote>
+      </div>
+    </article>
+
+    <!-- RIGHT: “BEFORE → AFTER” & ADOPTION RING -->
+    <aside class="card">
+      <h3>Impact visuals</h3>
+      <div class="body">
+        <div class="figure">
+          <!-- Before/After bars (fixed numbers) -->
+          <svg viewBox="0 0 560 200" width="100%" height="auto" aria-label="Open data tickets before and after launch">
+            <rect width="560" height="200" fill="#0f1318"/>
+            <text x="16" y="22" fill="#e9eef6" font-size="16" font-family="Inter" font-weight="700">Open “data” tickets (weekly)</text>
+            <line x1="80" y1="40" x2="80" y2="165" stroke="rgba(255,255,255,.12)"/>
+            <line x1="80" y1="165" x2="520" y2="165" stroke="rgba(255,255,255,.12)"/>
+            <text x="70" y="170" fill="#98a2b3" font-size="12" font-family="Inter">0</text>
+            <!-- bars (y = 165 - height). Peak 73 → height 146; After 27 → height 54 -->
+            <rect x="130" y="19" width="90" height="146" fill="#ef4444"/>
+            <text x="175" y="30" text-anchor="middle" fill="#e9eef6" font-size="12">Before</text>
+            <text x="175" y="48" text-anchor="middle" fill="#e9eef6" font-size="16" font-weight="700">73</text>
+
+            <rect x="300" y="111" width="90" height="54" fill="#34d399"/>
+            <text x="345" y="90" text-anchor="middle" fill="#e9eef6" font-size="12">After</text>
+            <text x="345" y="110" text-anchor="middle" fill="#e9eef6" font-size="16" font-weight="700">27</text>
+
+            <line x1="260" y1="40" x2="260" y2="165" stroke="rgba(147,197,253,.8)" stroke-dasharray="4 4"/>
+            <text x="264" y="54" fill="#93c5fd" font-size="12" font-family="Inter">Launch (May)</text>
+            <text x="300" y="180" fill="#dbe7fb" font-size="12" font-family="Inter">≈63% reduction</text>
+          </svg>
+          <div class="pad small">Measured from peak of 73 pre-launch to 27 post-launch. Weekly list available on request.</div>
+        </div>
+
+        <div class="figure">
+          <!-- Adoption donut: percent-only -->
+          <svg viewBox="0 0 220 140" width="100%" height="auto" aria-label="Relative adoption">
+            <rect width="220" height="140" fill="#0f1318"/>
+            <g transform="translate(65,70)">
+              <circle r="44" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="14"/>
+              <circle r="44" fill="none" stroke="#5eead4" stroke-width="14"
+                      stroke-dasharray="221 277" stroke-linecap="round"
+                      transform="rotate(-90)"/>
+              <text x="0" y="6" text-anchor="middle" font-size="18" fill="#e9eef6" font-weight="800">80%</text>
+              <text x="0" y="24" text-anchor="middle" font-size="11" fill="#98a2b3">of primary app</text>
+            </g>
+            <text x="130" y="62" fill="#e9eef6" font-size="14" font-weight="700">Relative adoption</text>
+            <text x="130" y="82" fill="#98a2b3" font-size="12">#2 interface company-wide</text>
+          </svg>
+          <div class="pad small">~80% of primary app traffic; #2 most-viewed interface across customers and internal teams.</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- GALLERY -->
+    <article class="card">
+      <h3>Product screenshots</h3>
+      <div class="body">
+        <div class="gallery">
+          <figure class="figure">
+            <img class="shot" src="/portfolio/img/all-records-hero.png" alt="All Records table—entity nav + freshness columns"/>
+            <figcaption class="pad caption">List view: discover entities and freshness at a glance (search, sort by Date Added/Updated).</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="shot" src="/portfolio/img/all-records-profile.png" alt="Record profile showing Sense Data and fields"/>
+            <figcaption class="pad caption">Profile: Sense Data fields and provenance for the selected record.</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="shot" src="/portfolio/img/all-records-associated.png" alt="Associated entities tab"/>
+            <figcaption class="pad caption">Associated entities: easy traversal across related objects.</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="shot" src="/portfolio/img/all-records-activity.png" alt="Activity timeline and communications"/>
+            <figcaption class="pad caption">Activity & communications timeline: explainability for “what touched this and when.”</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="shot" src="/portfolio/img/all-records-timeline.png" alt="Workflow events with related messages expanded"/>
+            <figcaption class="pad caption">Workflow events with related messages expanded (why an automation fired).</figcaption>
+          </figure>
+          <figure class="figure">
+            <img class="shot" src="/portfolio/img/debugger-compare.png" alt="Data Debugger comparison view"/>
+            <figcaption class="pad caption">Optional link-out: Data Debugger to compare Sense vs source vs transform for root-cause.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+
+    <!-- DELIVERY & INFLUENCE -->
+    <article class="card">
+      <h3>Delivery & influence</h3>
+      <div class="body">
+        <ul>
+          <li><strong>Rollout:</strong> feature-flagged; enablement for CS/IM; release notes and support articles.</li>
+          <li><strong>Org friction:</strong> concern that “showing more data would create tickets.” I ran discovery sessions,
+            piloted with high-need accounts, and proved the opposite: <em>deflection through explainability</em>.</li>
+          <li><strong>Rituals:</strong> shipped alongside drift/anomaly checks and weekly reliability reviews to prevent regression.</li>
+        </ul>
+        <p class="small">Design notes and early feedback (hide nulls, date scopes, navigation) guided multiple iterations.</p>
+      </div>
+    </article>
+
+    <!-- LINKS -->
+    <aside class="card">
+      <h3>References & docs</h3>
+      <div class="body">
+        <ul>
+          <li>All Records: problem, SQL workflows, and design notes (internal).</li>
+          <li>Support docs: All Records Overview & Features (public).</li>
+        </ul>
+        <p class="small">Data Debugger is a separate internal tool; this page links to it only as a <em>root-cause path</em>, not as part of the All Records surface.</p>
+      </div>
+    </aside>
+  </section>
+
+  <footer>© <span id="year"></span> Zach Morrissey</footer>
+</div>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
