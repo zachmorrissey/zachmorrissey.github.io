@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sense Developer Platform & API Ecosystem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050608; --panel:#0e1217; --surface:#1c212c;
+  --muted:#98a2b3; --text:#e9eef6;
+  --brand:#818cf8; /* Indigo/Purple for Developer/API */
+  --brand-glow:rgba(129,140,248,0.15);
+  --accent:#60a5fa; --ok:#34d399; --warn:#fbbf24; --danger:#f87171;
+  --border:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.5}
+
+/* UTILS */
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+a{color:var(--text);text-decoration:none;transition:color .2s}
+a:hover{color:var(--brand)}
+.sub{color:var(--muted);font-size:1.1rem;margin-top:8px;max-width:65ch}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:center;padding-bottom:40px;font-weight:600;font-size:0.9rem;color:var(--muted)}
+header a{display:inline-flex;align-items:center;gap:6px}
+
+/* HERO */
+.hero{padding:60px 0 80px;border-bottom:1px solid var(--border)}
+h1{font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 16px;background:linear-gradient(to right, #fff, #a5b4fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stats-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:32px}
+.stat-card{background:var(--panel);border:1px solid var(--border);padding:16px 20px;border-radius:12px;display:flex;flex-direction:column;min-width:200px}
+.stat-val{font-size:1.5rem;font-weight:700;color:var(--brand)}
+.stat-label{font-size:0.85rem;color:var(--muted);font-weight:500}
+.stat-card.highlight{background:var(--brand-glow);border-color:rgba(129,140,248,0.3)}
+
+/* FEATURE SECTIONS */
+.feature-section{margin-top:80px;display:flex;flex-direction:column;gap:80px}
+.feature{display:grid;grid-template-columns:1fr;gap:32px;align-items:start}
+
+.f-content h2{font-size:1.75rem;margin:0 0 12px;letter-spacing:-0.01em}
+.f-content p{color:var(--muted);margin-bottom:24px;font-size:1.05rem}
+.f-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tag{font-size:0.75rem;padding:4px 10px;background:var(--surface);border-radius:99px;border:1px solid var(--border);color:var(--muted)}
+
+/* IMAGE STYLES */
+.f-media{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,0.4);background:var(--panel)}
+.f-media img{width:100%;height:auto;display:block;transition:transform 0.3s ease}
+.f-media:hover img{transform:scale(1.02)}
+.caption{padding:12px 16px;font-size:0.85rem;color:var(--muted);background:var(--surface);border-top:1px solid var(--border)}
+
+/* CODE BLOCK */
+.code-block{background:#0d1117;border-radius:8px;padding:20px;font-family:'JetBrains Mono', monospace;font-size:0.8rem;color:#c9d1d9;overflow-x:auto;border:1px solid var(--border);margin-bottom:20px;line-height:1.6}
+.key{color:#79c0ff} .str{color:#a5d6ff} .bool{color:#ff7b72}
+
+/* FOOTER */
+footer{margin-top:100px;padding-top:40px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:0.9rem}
+
+/* DESKTOP LAYOUT */
+@media(min-width: 900px){
+  .feature{grid-template-columns:1fr 1.5fr; gap:60px}
+  .feature.reverse{direction:rtl}
+  .feature.reverse .f-content{direction:ltr}
+  .feature.reverse .f-media{direction:ltr}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a href="portfolio.html">← Back to Portfolio</a>
+    <span>Platform Strategy & Ecosystem</span>
+  </header>
+
+  <section class="hero">
+    <h1>The Sense Developer Platform</h1>
+    <p class="sub">
+      Transforming Sense from a standalone product into an open ecosystem. By standardizing our API, we unlocked 60+ partner integrations and shifted 42% of our business volume to a partner-led model.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-card highlight">
+        <div class="stat-val">$15M</div>
+        <div class="stat-label">New ARR Unlocked</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">42%</div>
+        <div class="stat-label">of Total Platform Volume</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">260+</div>
+        <div class="stat-label">Enterprise Clients Live</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">Team of 3</div>
+        <div class="stat-label">PMs Managed</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="feature-section">
+
+    <article class="feature">
+      <div class="f-content">
+        <div class="f-tags"><span class="tag">Developer Experience</span><span class="tag">Scale</span></div>
+        <h2>From "Building" to "Enabling"</h2>
+        <p>Originally, Sense built every integration custom (Pull model). This didn't scale. I pivoted our strategy to an <strong>Open API (Push)</strong> model.</p>
+        <p>I led the creation of <strong>developer.sensehq.com</strong> to treat our API as a Product. We enforced strict governance for Delta Syncs and Batching, allowing us to scale to 1.6B events.</p>
+      </div>
+      <div class="f-media">
+        <img src="img/developer-portal.png" alt="Sense Developer Portal Homepage">
+        <div class="caption">The public face of our platform: Self-serve docs, guides, and API references.</div>
+      </div>
+    </article>
+
+    <div style="display:flex; flex-direction:column; gap:20px; background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:30px; overflow:hidden">
+      <div>
+        <div class="f-tags"><span class="tag">Strategy</span><span class="tag">Architecture</span></div>
+        <h2 style="margin-top:10px">The "Ecosystem Loop" Architecture</h2>
+        <p style="color:var(--muted); max-width:80ch">
+          We moved from a linear pipeline to a circular ecosystem. Partners push data (Candidates/Jobs) to our Ingestion API, we normalize it via our EMS (Entity Management System), and then we push value back via Webhooks (Writebacks).
+        </p>
+      </div>
+      <img src="img/sense-api-architecture.png" style="width:100%; border-radius:8px; border:1px solid var(--border)" alt="Platform Architecture Diagram">
+      <div class="caption">System of Record → Sense API (Ingestion) → Sense Core → Sense API (Writebacks). Closing the data loop.</div>
+    </div>
+
+    <article class="feature reverse">
+      <div class="f-content">
+        <div class="f-tags"><span class="tag">Governance</span><span class="tag">Performance</span></div>
+        <h2>Enforcing Quality at Scale</h2>
+        <p>Opening an API is risky. Badly behaving partners can crash your DB. We wrote strict guidelines for <strong>Delta Syncs</strong> (high-watermark timestamps) and <strong>Batching</strong>.</p>
+        <p>This documentation wasn't just helpful suggestions; it was the "contract" for integration. This governance allowed us to scale to 1.6B events without platform instability.</p>
+      </div>
+      <div class="f-media">
+        <img src="img/api-best-practices.png" alt="API Best Practices Documentation">
+        <div class="caption">Clear documentation on Sync/Change events to prevent partner-induced DDoSes.</div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="f-content">
+        <div class="f-tags"><span class="tag">Webhooks</span><span class="tag">Data Enrichment</span></div>
+        <h2>The Writeback Engine</h2>
+        <p>Data ingestion is easy; writing back is hard. I designed the <strong>Standardized Writeback API</strong> that pushes activity (SMS logs, notes, field updates) back to the partner system in real-time.</p>
+        <p>This allows Sense to act as a "headless" automation layer that enriches the partner's System of Record without creating data silos.</p>
+      </div>
+      
+      <div class="code-block">
+{
+  <span class="key">"type"</span>: <span class="str">"NOTE_WRITEBACK"</span>,
+  <span class="key">"id"</span>: <span class="str">"evt_85b6080f-a034"</span>,
+  <span class="key">"data"</span>: {
+    <span class="key">"entity"</span>: { <span class="key">"id"</span>: <span class="str">"99021"</span>, <span class="key">"type"</span>: <span class="str">"CANDIDATE"</span> },
+    <span class="key">"note"</span>: {
+      <span class="key">"subject"</span>: <span class="str">"SMS Opt-Out via Sense"</span>,
+      <span class="key">"body"</span>: <span class="str">"Candidate replied STOP to campaign #402."</span>,
+      <span class="key">"is_private"</span>: <span class="bool">false</span>
+    },
+    <span class="key">"fields"</span>: [
+      { <span class="key">"name"</span>: <span class="str">"opt_out_sms"</span>, <span class="key">"value"</span>: <span class="bool">true</span> }
+    ]
+  }
+}
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    © <span id="year"></span> Zach Morrissey
+  </footer>
+</div>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
