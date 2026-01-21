@@ -150,21 +150,23 @@ footer{margin-top:100px;padding-top:40px;border-top:1px solid var(--border);text
         <p>Data ingestion is easy; writing back is hard. I designed the <strong>Standardized Writeback API</strong> that pushes activity (SMS logs, notes, field updates) back to the partner system in real-time.</p>
         <p>This allows Sense to act as a "headless" automation layer that enriches the partner's System of Record without creating data silos.</p>
       </div>
-      
+
       <div class="code-block">
 {
-  <span class="key">"type"</span>: <span class="str">"NOTE_WRITEBACK"</span>,
-  <span class="key">"id"</span>: <span class="str">"evt_85b6080f-a034"</span>,
+  <span class="key">"type"</span>: <span class="str">"ENTITY_UPDATE"</span>,
+  <span class="key">"id"</span>: <span class="str">"evt_placed_99021"</span>,
   <span class="key">"data"</span>: {
     <span class="key">"entity"</span>: { <span class="key">"id"</span>: <span class="str">"99021"</span>, <span class="key">"type"</span>: <span class="str">"CANDIDATE"</span> },
-    <span class="key">"note"</span>: {
-      <span class="key">"subject"</span>: <span class="str">"SMS Opt-Out via Sense"</span>,
-      <span class="key">"body"</span>: <span class="str">"Candidate replied STOP to campaign #402."</span>,
-      <span class="key">"is_private"</span>: <span class="bool">false</span>
-    },
     <span class="key">"fields"</span>: [
-      { <span class="key">"name"</span>: <span class="str">"opt_out_sms"</span>, <span class="key">"value"</span>: <span class="bool">true</span> }
-    ]
+      { <span class="key">"name"</span>: <span class="str">"status"</span>, <span class="key">"value"</span>: <span class="str">"HIRED/PLACED"</span> },
+      { <span class="key">"name"</span>: <span class="str">"salary"</span>, <span class="key">"value"</span>: <span class="str">145000</span> }
+    ],
+    <span class="key">"associated_entities"</span>: [
+       { <span class="key">"id"</span>: <span class="str">"job_8812"</span>, <span class="key">"type"</span>: <span class="str">"JOB_ORDER"</span> }
+    ],
+    <span class="key">"note"</span>: {
+      <span class="key">"body"</span>: <span class="str">"Candidate accepted offer via Sense Scheduler."</span>
+    }
   }
 }
       </div>
