@@ -151,21 +151,30 @@ footer{margin-top:100px;padding-top:40px;border-top:1px solid var(--border);text
         <p>This allows Sense to act as a "headless" automation layer that enriches the partner's System of Record without creating data silos.</p>
       </div>
 
-      <div class="code-block">
+     <div class="code-block">
 {
   <span class="key">"type"</span>: <span class="str">"ENTITY_UPDATE"</span>,
   <span class="key">"id"</span>: <span class="str">"evt_placed_99021"</span>,
   <span class="key">"data"</span>: {
-    <span class="key">"entity"</span>: { 
-      <span class="key">"id"</span>: <span class="str">"99021"</span>, 
-      <span class="key">"type"</span>: <span class="str">"CANDIDATE"</span> 
+    <span class="key">"entity"</span>: {
+      <span class="key">"id"</span>: <span class="str">"99021"</span>,
+      <span class="key">"type"</span>: <span class="str">"CANDIDATE"</span>
     },
     <span class="key">"fields"</span>: [
-      { <span class="key">"name"</span>: <span class="str">"status"</span>, <span class="key">"value"</span>: <span class="str">"HIRED/PLACED"</span> },
-      { <span class="key">"name"</span>: <span class="str">"salary"</span>, <span class="key">"value"</span>: <span class="bool">145000</span> }
+      {
+        <span class="key">"name"</span>: <span class="str">"status"</span>,
+        <span class="key">"value"</span>: <span class="str">"HIRED/PLACED"</span>
+      },
+      {
+        <span class="key">"name"</span>: <span class="str">"salary"</span>,
+        <span class="key">"value"</span>: <span class="bool">145000</span>
+      }
     ],
     <span class="key">"associated_entities"</span>: [
-       { <span class="key">"id"</span>: <span class="str">"job_8812"</span>, <span class="key">"type"</span>: <span class="str">"JOB_ORDER"</span> }
+      {
+        <span class="key">"id"</span>: <span class="str">"job_8812"</span>,
+        <span class="key">"type"</span>: <span class="str">"JOB_ORDER"</span>
+      }
     ],
     <span class="key">"note"</span>: {
       <span class="key">"body"</span>: <span class="str">"Candidate accepted offer via Sense Scheduler."</span>
