@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Data Visibility & Variable Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050608; --panel:#0e1217; --surface:#1c212c;
+  --muted:#98a2b3; --text:#e9eef6;
+  --brand:#2dd4bf; /* Teal/Cyan for Data/UX */
+  --brand-glow:rgba(45,212,191,0.15);
+  --border:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.5}
+
+/* UTILS */
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+a{color:var(--text);text-decoration:none;transition:color .2s}
+a:hover{color:var(--brand)}
+.sub{color:var(--muted);font-size:1.1rem;margin-top:8px;max-width:65ch}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:center;padding-bottom:40px;font-weight:600;font-size:0.9rem;color:var(--muted)}
+header a{display:inline-flex;align-items:center;gap:6px}
+
+/* HERO */
+.hero{padding:60px 0 80px;border-bottom:1px solid var(--border)}
+h1{font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 16px;background:linear-gradient(to right, #fff, #99f6e4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stats-row{display:flex;flex-wrap:wrap;gap:20px;margin-top:32px}
+.stat-card{background:var(--panel);border:1px solid var(--border);padding:16px 20px;border-radius:12px;display:flex;flex-direction:column;min-width:200px}
+.stat-val{font-size:1.5rem;font-weight:700;color:var(--brand)}
+.stat-label{font-size:0.85rem;color:var(--muted);font-weight:500}
+.stat-card.highlight{background:var(--brand-glow);border-color:rgba(45,212,191,0.3)}
+
+/* CONTENT - STACKED LAYOUT CHANGE */
+.feature-section{margin-top:80px;display:flex;flex-direction:column;gap:100px} /* Increased gap for breathing room */
+
+/* The Stacked Feature Block */
+.feature-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.f-content {
+  max-width: 800px; /* Limits text width for readability */
+}
+.f-content h2{font-size:1.75rem;margin:0 0 12px;letter-spacing:-0.01em}
+.f-content p{color:var(--muted);margin-bottom:24px;font-size:1.05rem}
+.tag{font-size:0.75rem;padding:4px 10px;background:var(--surface);border-radius:99px;border:1px solid var(--border);color:var(--muted); margin-right:8px}
+
+/* IMAGES - FULL WIDTH */
+.f-media{
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--panel); 
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  width: 100%; /* Ensures it fills the container */
+}
+.f-media img{width:100%;height:auto;display:block}
+.caption{padding:12px 16px;font-size:0.85rem;color:var(--muted);background:var(--surface);border-top:1px solid var(--border)}
+
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a href="portfolio.html">← Back to Portfolio</a>
+    <span>UX / Data Visibility</span>
+  </header>
+
+  <section class="hero">
+    <h1>Variable Exploration UI</h1>
+    <p class="sub">
+      A "Data X-Ray" for the platform. I designed this interface to solve the "Black Box" problem, giving non-technical users total transparency into their schema, data quality (fill rates), and field usage without needing to ping Engineering.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-card highlight">
+        <div class="stat-val">100%</div>
+        <div class="stat-label">Schema Visibility</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">Self-Serve</div>
+        <div class="stat-label">Data Auditing</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val">AI-Powered</div>
+        <div class="stat-label">Field Definitions</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="feature-section">
+
+    <article class="feature-stack">
+      <div class="f-content">
+        <span class="tag">Design Philosophy</span><span class="tag">Density</span>
+        <h2>Function Over Form</h2>
+        <p>Customers often have messy data (e.g., three different fields named "Address"). They didn't need a pretty card view; they needed a <strong>high-density diagnostic tool</strong>.</p>
+        <p>I designed this grid to show maximum rows per page, with a <strong>Global Search</strong> that cuts across all entities (Candidate, Job, Placement). This prevents users from checking the wrong entity silo and missing critical data.</p>
+      </div>
+      <div class="f-media">
+        <img src="img/variables-herov3.png" alt="Variables Grid UI">
+        <div class="caption">The "Data Command Center." Note the cross-entity search and "Fill Rate" indicators.</div>
+      </div>
+    </article>
+
+    <article class="feature-stack">
+      <div class="f-content">
+        <span class="tag">Data Quality</span>
+        <h2>The "Fill Rate" Metric</h2>
+        <p>The biggest question users had was: <em>"Is this field actually being used?"</em></p>
+        <p>I introduced a background job that calculates the <strong>Non-Empty Value % (Fill Rate)</strong> for every field. If a user sees "Address 1 (5%)" and "Address 2 (95%)," they instantly know which variable to map, preventing thousands of failed messages downstream.</p>
+      </div>
+      <div class="f-media">
+         <img src="img/variables-panel-side-toov3.png" alt="Variable Inspector Side Panel">
+         <div class="caption">The Inspector Panel: Shows Top 10 values, unique value counts, and where this variable is used.</div>
+      </div>
+    </article>
+
+    <article class="feature-stack">
+      <div class="f-content">
+        <span class="tag">Practical AI</span><span class="tag">Explainability</span>
+        <h2>Translating Python to English</h2>
+        <p>We have "Derived Fields" (e.g., <code>date_last_note</code>) that are calculated via complex Python logic. Customers (and CS) often forgot what triggered them.</p>
+        <p>I implemented an LLM-powered feature that reads the backend Python config and generates a <strong>human-readable tooltip definition</strong> on the fly. This turns <em>"config code"</em> into clear, actionable logic.</p>
+      </div>
+      <div class="f-media">
+        <img src="img/variables-derived-field-logicv3.png" alt="AI Tooltip explaining derived field logic">
+        <div class="caption">Contextual AI: Hovering over a derived field reveals the underlying logic in plain English.</div>
+      </div>
+    </article>
+
+    <article class="feature-stack">
+      <div class="f-content">
+        <span class="tag">Troubleshooting</span>
+        <h2>The "Test Record" Debugger</h2>
+        <p>Sometimes you just need to check one specific person. I added a <strong>Test Record</strong> mode that lets users search for a known entity (e.g., "James Vince") and see exactly what values Sense has stored for them.</p>
+      </div>
+      
+      <div class="f-media" style="padding:24px; background:var(--surface);">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; align-items:start">
+          
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <img src="img/variables-test-record.png" style="border-radius:6px; border:1px solid var(--border); box-shadow:0 4px 12px rgba(0,0,0,0.2)" alt="Step 1: Search for Record">
+            <div style="text-align:center; font-size:0.8rem; color:var(--muted); font-weight:600">Step 1: Search Entity</div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:12px">
+            <img src="img/variables-test-record-all-records-view.png" style="border-radius:6px; border:1px solid var(--border); box-shadow:0 4px 12px rgba(0,0,0,0.2)" alt="Step 2: Inspect Raw Data">
+            <div style="text-align:center; font-size:0.8rem; color:var(--muted); font-weight:600">Step 2: View Raw Payload</div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    © <span id="year"></span> Zach Morrissey
+  </footer>
+</div>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
