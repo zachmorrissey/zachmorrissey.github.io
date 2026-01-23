@@ -97,13 +97,19 @@ h1{font-size:clamp(2.5rem, 5vw, 4rem);line-height:1.1;letter-spacing:-0.02em;mar
         <span class="tag">The Challenge</span>
         <h2>The "N+1" Integration Trap</h2>
         <p>When we acquired Skillate (TRM), they had zero integrations with the US market ATSs we supported (Workday, Taleo, etc.). Sales was selling "Unified CRM + Automation" packages, but the products were technically siloed.</p>
-        <p>Building 60 custom integrations for Skillate would have taken years. We had sold deals that we couldn't technically support yet, creating a massive delivery risk.</p>
-      </div>
-      <div style="padding:40px; background:var(--panel); border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--muted)">
-        <div>
-          <div style="font-size:3rem; margin-bottom:10px">🚧</div>
-          <strong>The Block:</strong> Enterprise deals were stalled because the new acquisition couldn't ingest data from clients' Systems of Record.
+        <p>Building 60 custom integrations for Skillate would have taken years. As you can see from the diagram, a single bi-directional sync requires mapping dozens of touchpoints (Applications, Offers, Hires) across varied latency windows.</p>
+        
+        <div style="margin-top:20px; padding:16px; background:rgba(248,113,113,0.1); border-left:3px solid #f87171; border-radius:4px">
+          <div style="font-size:0.75rem; color:#f87171; font-weight:600; text-transform:uppercase; margin-bottom:4px">Risk Analysis</div>
+          <div style="font-size:0.9rem; color:#e9eef6">
+            <strong>Estimated Dev Time:</strong> 60 Integrations × 3 Months/each = <strong>15 Years (Legacy Roadmap)</strong>
+          </div>
         </div>
+      </div>
+      
+      <div class="f-media">
+        <img src="img/integration-complexity.png" alt="Complex Workday Integration Flowchart">
+        <div class="caption">The "Trap": A single deep integration (like this Workday flow) is incredibly complex. Replicating this 60x was impossible.</div>
       </div>
     </article>
 
